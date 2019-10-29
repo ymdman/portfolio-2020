@@ -1,5 +1,7 @@
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const TerserJSPlugin = require('terser-webpack-plugin');
 
 const isDevelopment = process.env.NODE_ENV === 'development';
 
@@ -7,12 +9,12 @@ module.exports = {
   mode: isDevelopment ? 'development': 'production',
 
   entry: {
-    app: './src/app.ts',
+    app: './src/app.ts'
   },
 
   output: {
     path: `${__dirname}/dist`,
-    filename: '[name].js',
+    filename: '[name].js'
   },
 
   module: {
@@ -63,6 +65,13 @@ module.exports = {
       filename: 'app.css'
     })
   ],
+
+  optimization: {
+    minimizer: [
+      new TerserJSPlugin({}),
+      new OptimizeCSSAssetsPlugin({})
+    ]
+  },
 
   devServer: {
     contentBase: './dist',

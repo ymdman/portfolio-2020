@@ -9,4 +9,4 @@ import PortfolioHeader from '../components/PortfolioHeader/index.vue';
   }
 })
 
-export default class Container extends Vue {};
+export default class Container extends Vue {}

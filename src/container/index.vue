@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <PortfolioHeader></PortfolioHeader>
+    <PortfolioHeader />
     <main>main</main>
-    <PortfolioFooter></PortfolioFooter>
+    <PortfolioFooter />
   </div>
 </template>
 
@@ -12,5 +12,5 @@
 </script>
 
 <style scoped>
-  @import "./index";
+  @import './index';
 </style>
