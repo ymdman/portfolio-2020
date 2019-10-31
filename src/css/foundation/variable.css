@@ -1,0 +1,22 @@
+:root {
+  /* color */
+  --color-primary: tomato;
+  --color-secondary: green;
+
+  /* font size */
+  --fs-xxx-large: 3rem;
+  --fs-xx-large: 2.4rem;
+  --fs-x-large: 2rem;
+  --fs-large: 1.8rem;
+  --fs-medium: 1.5rem;
+  --fs-x-small: 1.3rem;
+  --fs-xx-small: 1rem;
+
+  /* font color */
+  --fc-primary: #333;
+
+  /* line height */
+  --lh-large: 1.8;
+  --lh-medium: 1.5;
+  --lh-small: 1.2;
+}

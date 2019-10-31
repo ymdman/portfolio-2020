@@ -1,0 +1,11 @@
+html,
+body {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, "游ゴシック体", YuGothic, "Yu Gothic Medium", sans-serif;
+  font-size: var(--fs-medium);
+  line-height: var(--lh-medium);
+  color: var(--color-primary);
+}
