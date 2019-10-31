@@ -6,7 +6,7 @@ const TerserJSPlugin = require('terser-webpack-plugin');
 const isDevelopment = process.env.NODE_ENV === 'development';
 
 module.exports = {
-  mode: isDevelopment ? 'development': 'production',
+  mode: isDevelopment ? 'development' : 'production',
 
   entry: {
     app: './src/app.ts'
@@ -67,10 +67,7 @@ module.exports = {
   ],
 
   optimization: {
-    minimizer: [
-      new TerserJSPlugin({}),
-      new OptimizeCSSAssetsPlugin({})
-    ]
+    minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})]
   },
 
   devServer: {

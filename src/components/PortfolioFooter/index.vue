@@ -4,12 +4,15 @@
   </footer>
 </template>
 
+<!-- prettier-ignore -->
+
 <script lang="ts">
   export default {
     name: 'PortfolioFooter'
   };
 </script>
 
+<!-- prettier-ignore -->
 <style scoped>
   .footer {
     color: green;

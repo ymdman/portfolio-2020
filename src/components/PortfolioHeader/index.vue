@@ -4,12 +4,14 @@
   </header>
 </template>
 
+<!-- prettier-ignore -->
 <script lang="ts">
   export default {
     name: 'PortfolioHeader'
   };
 </script>
 
+<!-- prettier-ignore -->
 <style scoped>
   .header {
     color: tomato;
