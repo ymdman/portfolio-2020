@@ -1,12 +1,11 @@
 import { Component, Vue } from 'vue-property-decorator';
-import PortfolioFooter from '../components/PortfolioFooter/index.vue';
-import PortfolioHeader from '../components/PortfolioHeader/index.vue';
+import PfoFooter from '../components/PfoFooter/index.vue';
+import PfoHeader from '../components/PfoHeader/index.vue';
 
 @Component({
   components: {
-    PortfolioFooter,
-    PortfolioHeader
+    PfoFooter,
+    PfoHeader
   }
 })
-
 export default class Container extends Vue {}

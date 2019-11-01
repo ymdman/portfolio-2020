@@ -5,16 +5,12 @@
 </template>
 
 <!-- prettier-ignore -->
-
 <script lang="ts">
-  export default {
-    name: 'PortfolioFooter'
-  };
+  import VueComponent from './index';
+  export default VueComponent;
 </script>
 
 <!-- prettier-ignore -->
 <style scoped>
-  .footer {
-    color: green;
-  }
+  @import './style';
 </style>

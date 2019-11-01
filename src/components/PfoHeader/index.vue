@@ -1,9 +1,14 @@
 <template>
-  <div class="container">
-    <pfo-header />
-    <main>main</main>
-    <pfo-footer />
-  </div>
+  <header
+    v-if="true"
+    class="header"
+    data-id="id"
+    data-one="one"
+    data-two="two"
+    data-three="three"
+  >
+    <span class="header__inner">{{ text }}</span>
+  </header>
 </template>
 
 <!-- prettier-ignore -->
