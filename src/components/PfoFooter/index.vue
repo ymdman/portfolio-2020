@@ -1,6 +1,6 @@
 <template>
-  <footer class="footer">
-    <span class="footer__inner">footer component</span>
+  <footer v-if="isDesktop" class="footer">
+    <span @click="handleClick" class="footer__inner">Footer component</span>
   </footer>
 </template>
 
