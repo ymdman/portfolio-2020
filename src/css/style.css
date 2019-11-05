@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 /* Foundation */
 @import "modern-css-reset";
 @import "./foundation/variable.css";
