@@ -1,14 +1,12 @@
 import { Component, Vue } from 'vue-property-decorator';
+import { mapGetters, mapActions } from 'vuex';
 
-@Component
-export default class PfoFooter extends Vue {
-  get isDesktop(): boolean {
-    return this.$store.getters.isDesktop;
+@Component({
+  computed: {
+    ...mapGetters('layout', ['isDesktop'])
+  },
+  methods: {
+    ...mapActions('layout', ['updateSize'])
   }
-
-  handleClick(): void {
-    console.log(this.$store);
-
-    this.$store.dispatch('updateSize');
-  }
-}
+})
+export default class PfoFooter extends Vue {}

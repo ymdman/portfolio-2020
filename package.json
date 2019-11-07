@@ -34,7 +34,6 @@
     "terser-webpack-plugin": "^2.2.1",
     "ts-loader": "^6.2.1",
     "typescript": "^3.6.4",
-    "vue-class-component": "^7.1.0",
     "vue-eslint-parser": "^6.0.4",
     "vue-loader": "^15.7.1",
     "vue-property-decorator": "^8.3.0",
