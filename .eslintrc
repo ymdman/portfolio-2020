@@ -26,7 +26,8 @@
         "singleQuote": true
       }
     ],
-    "vue/max-attributes-per-line": "off"
+    "vue/max-attributes-per-line": "off",
+    "vue/singleline-html-element-content-newline": "off"
   },
 
   "overrides": [{

@@ -1,0 +1,20 @@
+.drawer-menu {
+  height: 100%;
+  width: 230px;
+  background-color: brown;
+  position: fixed;
+  top: 0;
+
+  &__title {
+    color: #fff;
+  }
+
+  &__items {
+    color: #fff;
+  }
+
+  &__anchor {
+    display: block;
+    padding: 15px 20px;
+  }
+}

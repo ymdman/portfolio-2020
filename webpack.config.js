@@ -41,8 +41,8 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               plugins: [
-                require('postcss-nested'),
                 require('postcss-import'),
+                require('postcss-nested'),
                 require('autoprefixer')
               ]
             }

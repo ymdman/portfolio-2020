@@ -1,8 +1,11 @@
 <template>
-  <div class="container">
-    <pfo-header />
-    <main>main</main>
-    <pfo-footer />
+  <div>
+    <div class="container">
+      <pfo-header />
+      <main>main</main>
+      <pfo-footer />
+    </div>
+    <PfoDrawerMenu />
   </div>
 </template>
 
