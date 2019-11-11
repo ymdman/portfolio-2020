@@ -1,13 +1,6 @@
 <template>
-  <header
-    v-if="true"
-    class="header"
-    data-id="id"
-    data-one="one"
-    data-two="two"
-    data-three="three"
-  >
-    <span class="header__inner">{{ text }}</span>
+  <header class="header">
+    <h1 class="header__logo">Site Name</h1>
   </header>
 </template>
 

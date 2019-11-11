@@ -1,12 +1,9 @@
 import { Component, Vue } from 'vue-property-decorator';
-import { mapGetters, mapActions } from 'vuex';
+import { mapActions } from 'vuex';
 
 @Component({
-  computed: {
-    ...mapGetters('layout', ['isDesktop'])
-  },
   methods: {
-    ...mapActions('layout', ['updateSize'])
+    ...mapActions('drawerMenu', ['toggleDrawerMenu'])
   }
 })
 export default class PfoDrawerMenu extends Vue {}
