@@ -1,11 +1,14 @@
 <template>
-  <div>
-    <div class="container">
+  <div class="container">
+    <div class="body">
       <pfo-header />
       <main>main</main>
       <pfo-footer />
     </div>
-    <PfoDrawerMenu />
+    <transition name="drawer-menu">
+      <PfoDrawerMenu v-show="isOpened" class="drawer-menu" />
+    </transition>
+    <div @click="toggleDrawerMenu" class="menu-icon">Menu Icon</div>
   </div>
 </template>
 

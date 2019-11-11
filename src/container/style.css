@@ -1,5 +1,31 @@
 .container {
-  width: 1000px;
+}
+
+.body {
+  width: 90%;
   margin-right: auto;
   margin-left: auto;
+}
+
+.drawer-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  &-enter-active,
+  &-leave-active {
+    transition: left 400ms;
+  }
+
+  &-enter,
+  &-leave-to {
+    left: -230px;
+  }
+}
+
+.menu-icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
 }
