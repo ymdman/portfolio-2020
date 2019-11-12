@@ -5,9 +5,7 @@
       <main>main</main>
       <pfo-footer />
     </div>
-    <transition name="drawer-menu">
-      <PfoDrawerMenu v-show="isOpened" class="drawer-menu" />
-    </transition>
+    <PfoDrawerMenu />
     <div @click="toggleDrawerMenu" class="menu-icon">Menu Icon</div>
   </div>
 </template>
