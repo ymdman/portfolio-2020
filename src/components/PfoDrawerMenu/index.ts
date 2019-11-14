@@ -1,12 +1,13 @@
 import { Component, Vue } from 'vue-property-decorator';
-import { mapActions, mapGetters } from 'vuex';
+import drawerMenu from '../../store/modules/drawerMenu';
 
-@Component({
-  computed: {
-    ...mapGetters('drawerMenu', ['isOpened'])
-  },
-  methods: {
-    ...mapActions('drawerMenu', ['toggleDrawerMenu'])
+@Component
+export default class PfoDrawerMenu extends Vue {
+  get isDrawerMenuOpened(): boolean {
+    return drawerMenu.isOpened;
   }
-})
-export default class PfoDrawerMenu extends Vue {}
+
+  handleOverlayClick(): void {
+    drawerMenu.toggle();
+  }
+}

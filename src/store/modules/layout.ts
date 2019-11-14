@@ -1,57 +1,43 @@
-import { Module, ActionTree, MutationTree, GetterTree } from 'vuex';
+import {
+  VuexModule,
+  Module,
+  Action,
+  Mutation,
+  getModule
+} from 'vuex-module-decorators';
+import store from '../index';
 
-export interface RootState {
-  modules: object;
-}
+@Module({
+  dynamic: true,
+  store,
+  namespaced: true,
+  name: 'layout'
+})
+class Layout extends VuexModule {
+  type = window.innerWidth > 640 ? 'desktop' : 'mobile';
+  width = window.innerWidth;
 
-export interface LayoutState {
-  type: string;
-  layout: {
-    width: number;
-    height: number;
-  };
-}
-
-const state: LayoutState = {
-  type: window.innerWidth > 640 ? 'desktop' : 'mobile',
-  layout: {
-    width: window.innerWidth,
-    height: window.innerHeight
+  @Action
+  updateSize(): void {
+    this.context.commit('layout');
   }
-};
 
-const actions: ActionTree<LayoutState, RootState> = {
-  updateSize: (context): void => {
-    context.commit('layout');
-  }
-};
-
-const mutations: MutationTree<LayoutState> = {
-  layout: (state): void => {
-    if (state.layout.width > 640) {
-      state.type = 'desktop';
+  @Mutation
+  layout(): void {
+    if (this.width > 640) {
+      this.type = 'desktop';
     } else {
-      state.type = 'mobile';
+      this.type = 'mobile';
     }
   }
-};
 
-const getters: GetterTree<LayoutState, RootState> = {
-  isDesktop: (state): boolean => {
-    return state.type === 'desktop';
-  },
-
-  isMobile: (state): boolean => {
-    return state.type === 'mobile';
+  get isDesktop(): boolean {
+    return this.type === 'desktop';
   }
-};
 
-const Layout: Module<LayoutState, RootState> = {
-  namespaced: true,
-  state,
-  actions,
-  mutations,
-  getters
-};
+  get isMobile(): boolean {
+    return this.type === 'mobile';
+  }
+}
 
-export default Layout;
+export default getModule(Layout);

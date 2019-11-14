@@ -1,10 +1,14 @@
 <template>
   <div class="container">
     <transition name="overlay">
-      <div @click="toggleDrawerMenu" v-show="isOpened" class="overlay" />
+      <div
+        @click="handleOverlayClick"
+        v-show="isDrawerMenuOpened"
+        class="overlay"
+      />
     </transition>
     <transition name="nav">
-      <nav v-show="isOpened" class="nav">
+      <nav v-show="isDrawerMenuOpened" class="nav">
         <h2 class="title">Menu</h2>
         <ul class="items">
           <li class="item">

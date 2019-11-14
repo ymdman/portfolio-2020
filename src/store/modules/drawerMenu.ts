@@ -1,41 +1,34 @@
-import { Module, ActionTree, MutationTree, GetterTree } from 'vuex';
+import {
+  VuexModule,
+  Module,
+  Action,
+  Mutation,
+  getModule
+} from 'vuex-module-decorators';
+import store from '../index';
 
-export interface RootState {
-  modules: object;
-}
-
-export interface DrawerMenuState {
-  isOpened: boolean;
-}
-
-const state: DrawerMenuState = {
-  isOpened: false
-};
-
-const actions: ActionTree<DrawerMenuState, RootState> = {
-  toggleDrawerMenu: (context): void => {
-    context.commit('drawerMenu');
-  }
-};
-
-const mutations: MutationTree<DrawerMenuState> = {
-  drawerMenu: (state): void => {
-    state.isOpened = !state.isOpened;
-  }
-};
-
-const getters: GetterTree<DrawerMenuState, RootState> = {
-  isOpened: (state): boolean => {
-    return state.isOpened;
-  }
-};
-
-const DrawerMenu: Module<DrawerMenuState, RootState> = {
+@Module({
+  dynamic: true,
+  store,
   namespaced: true,
-  state,
-  actions,
-  mutations,
-  getters
-};
+  name: 'drawerMenu'
+})
+class DrawerMenu extends VuexModule {
+  isOpen = false;
 
-export default DrawerMenu;
+  @Action
+  toggle(): void {
+    this.context.commit('drawerMenu');
+  }
+
+  @Mutation
+  drawerMenu(): void {
+    this.isOpen = !this.isOpen;
+  }
+
+  get isOpened(): boolean {
+    return this.isOpen;
+  }
+}
+
+export default getModule(DrawerMenu);

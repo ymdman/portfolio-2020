@@ -6,7 +6,7 @@
       <pfo-footer />
     </div>
     <PfoDrawerMenu />
-    <div @click="toggleDrawerMenu" class="menu-icon">Menu Icon</div>
+    <div @click="handleMenuIconClick" class="menu-icon">Menu Icon</div>
   </div>
 </template>
 
