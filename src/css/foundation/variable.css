@@ -16,6 +16,9 @@
   --fc-primary: #333;
   --fc-secondary: #666;
 
+  /* border color */
+  --bdrc-primary: #333;
+
   /* line height */
   --lh-large: 1.8;
   --lh-medium: 1.5;

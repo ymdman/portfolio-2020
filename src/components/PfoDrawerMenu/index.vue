@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="drawerMenu">
     <transition name="overlay">
       <div
         @click="handleOverlayClick"

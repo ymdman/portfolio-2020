@@ -6,7 +6,9 @@
       <pfo-footer />
     </div>
     <PfoDrawerMenu />
-    <div @click="handleMenuIconClick" class="menu-icon">Menu Icon</div>
+    <div @click="handleMenuIconClick" class="menu-icon">
+      <div v-for="(item, i) in items" :key="i" :class="changeClassName(item)" />
+    </div>
   </div>
 </template>
 
