@@ -6,8 +6,11 @@
       <pfo-footer />
     </div>
     <PfoDrawerMenu />
-    <div @click="handleMenuIconClick" class="menu-icon">
-      <div v-for="(item, i) in items" :key="i" :class="changeClassName(item)" />
+    <div @click="handleMenuClick" class="menu">
+      <transition name="menu" mode="out-in">
+        <PfoIconX v-if="isDrawerMenuOpened" class="menu__icon-x" />
+        <PfoIconThreeBars v-else class="menu__icon-three-bars" />
+      </transition>
     </div>
   </div>
 </template>

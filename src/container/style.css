@@ -7,72 +7,33 @@
   margin-left: auto;
 }
 
-.menu-icon {
+.menu {
   position: fixed;
   top: 20px;
   right: 20px;
   width: 30px;
-  height: 20px;
   cursor: pointer;
 
-  &__top,
-  &__center,
-  &__bottom {
-    background-color: var(--bdrc-primary);
-    width: inherit;
-    height: 2px;
-    position: absolute;
+  &__icon-three-bars {
+    color: #333;
   }
 
-  &__top {
-    top: 0;
+  &__icon-x {
+    color: #fff;
   }
 
-  &__center {
-    top: 0;
-    bottom: 0;
-    margin-top: auto;
-    margin-bottom: auto;
-    transform: rotate(0);
-
-    &-enter-active,
-    &-leave-active {
-      transition: transform 400ms;
-    }
-
-    &-enter,
-    &-leave-to {
-      transform: rotate(45deg);
-    }
-
-    &-enter-to,
-    &-leave {
-      transform: rotate(0);
-    }
+  &-enter-active,
+  &-leave-active {
+    transition: opacity 200ms;
   }
 
-  &__bottom {
-    bottom: 0;
+  &-enter,
+  &-leave-to {
+    opacity: 0.3;
   }
 
-  &__top,
-  &__bottom {
+  &-enter-to,
+  &-leave {
     opacity: 1;
-
-    &-enter-active,
-    &-leave-active {
-      transition: opacity 400ms;
-    }
-
-    &-enter,
-    &-leave-to {
-      opacity: 0;
-    }
-
-    &-enter-to,
-    &-leave {
-      opacity: 1;
-    }
   }
-
 }
