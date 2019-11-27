@@ -2,7 +2,9 @@
   <div class="container">
     <div class="body">
       <pfo-header />
-      <main>main</main>
+      <main>
+        <router-view />
+      </main>
       <pfo-footer />
     </div>
     <PfoDrawerMenu />

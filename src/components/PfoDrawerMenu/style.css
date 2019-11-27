@@ -37,6 +37,8 @@
 }
 
 .anchor {
+  color: #fff;
+  text-decoration: none;
   display: block;
   padding: 15px 20px;
 }

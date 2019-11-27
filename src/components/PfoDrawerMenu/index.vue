@@ -12,13 +12,31 @@
         <h2 class="title">Menu</h2>
         <ul class="items">
           <li class="item">
-            <a class="anchor">About</a>
+            <router-link
+              @click.native="handleRouterLinkClick"
+              to="/"
+              class="anchor"
+            >
+              About
+            </router-link>
           </li>
           <li class="item">
-            <a class="anchor">Skill</a>
+            <router-link
+              @click.native="handleRouterLinkClick"
+              to="/skill"
+              class="anchor"
+            >
+              Skill
+            </router-link>
           </li>
           <li class="item">
-            <a class="anchor">Works</a>
+            <router-link
+              @click.native="handleRouterLinkClick"
+              to="/career"
+              class="anchor"
+            >
+              Works
+            </router-link>
           </li>
         </ul>
       </nav>
