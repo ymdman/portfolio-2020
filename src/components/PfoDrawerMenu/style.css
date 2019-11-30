@@ -7,16 +7,16 @@
   background-color: #ccc;
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
 
   &-enter-active,
   &-leave-active {
-    transition: left 400ms;
+    transition: right 400ms;
   }
 
   &-enter,
   &-leave-to {
-    left: -230px;
+    right: -230px;
   }
 }
 

@@ -12,8 +12,6 @@ export default class PfoDrawerMenu extends Vue {
   }
 
   handleRouterLinkClick(): void {
-    console.log('hoge');
-
     drawerMenu.toggle();
   }
 }
