@@ -7,13 +7,10 @@
       </main>
       <pfo-footer />
     </div>
-    <PfoDrawerMenu />
-    <div @click="handleMenuClick" class="menu">
-      <transition name="menu" mode="out-in">
-        <PfoIconX v-if="isDrawerMenuOpened" class="menu__icon-x" />
-        <PfoIconThreeBars v-else class="menu__icon-three-bars" />
-      </transition>
+    <div @click="handleIconThreeBarsClick" class="iconThreeBars">
+      <PfoIconThreeBars />
     </div>
+    <PfoDrawerMenu />
   </div>
 </template>
 

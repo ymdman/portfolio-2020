@@ -4,7 +4,7 @@
 .nav {
   width: 230px;
   height: 100%;
-  background-color: #ccc;
+  background-color: var(--color-theme);
   position: fixed;
   top: 0;
   right: 0;
@@ -20,9 +20,18 @@
   }
 }
 
+.iconX {
+  width: 30px;
+  color: #fff;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-left: auto;
+  cursor: pointer;
+}
+
 .title {
   color: #fff;
-  margin-top: 50px;
+  margin-top: 20px;
   margin-left: 20px;
 }
 

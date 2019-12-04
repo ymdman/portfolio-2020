@@ -9,6 +9,9 @@
     </transition>
     <transition name="nav">
       <nav v-show="isDrawerMenuOpened" class="nav">
+        <div @click="handleIconXClick" class="iconX">
+          <PfoIconX />
+        </div>
         <h2 class="title">Menu</h2>
         <ul class="items">
           <li class="item">
