@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    top page
+  <div :style="{ height: `${windowHeight}px` }" class="hero">
+    {{ windowHeight }}
   </div>
 </template>
 

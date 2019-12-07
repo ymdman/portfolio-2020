@@ -7,9 +7,6 @@
       </main>
       <pfo-footer />
     </div>
-    <div @click="handleIconThreeBarsClick" class="iconThreeBars">
-      <PfoIconThreeBars />
-    </div>
     <PfoDrawerMenu />
   </div>
 </template>

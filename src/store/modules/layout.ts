@@ -16,6 +16,7 @@ import store from '../index';
 class Layout extends VuexModule {
   type = window.innerWidth > 640 ? 'desktop' : 'mobile';
   width = window.innerWidth;
+  height = window.innerHeight;
 
   @Action
   updateSize(): void {
@@ -37,6 +38,14 @@ class Layout extends VuexModule {
 
   get isMobile(): boolean {
     return this.type === 'mobile';
+  }
+
+  get windowWidth(): number {
+    return this.width;
+  }
+
+  get windowHeight(): number {
+    return this.height;
   }
 }
 

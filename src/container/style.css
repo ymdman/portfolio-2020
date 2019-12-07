@@ -6,12 +6,3 @@
   margin-right: auto;
   margin-left: auto;
 }
-
-.iconThreeBars {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  width: 30px;
-  color: var(--bdc-primary);
-  cursor: pointer;
-}

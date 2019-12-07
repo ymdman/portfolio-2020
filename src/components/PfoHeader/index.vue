@@ -1,6 +1,9 @@
 <template>
   <header class="header">
-    <h1 class="header__logo">Site Name</h1>
+    <h1 class="logo">Site Name</h1>
+    <div @click="handleIconThreeBarsClick" class="iconThreeBars">
+      <PfoIconThreeBars />
+    </div>
   </header>
 </template>
 
