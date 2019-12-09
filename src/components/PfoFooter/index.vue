@@ -1,6 +1,6 @@
 <template>
-  <footer v-if="isDesktop" class="footer">
-    <span @click="updateSize" class="footer__inner">Footer component</span>
+  <footer class="footer">
+    <small class="copyright">© Kazuhiro Yamada</small>
   </footer>
 </template>
 
