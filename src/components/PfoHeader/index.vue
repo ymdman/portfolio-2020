@@ -2,7 +2,7 @@
   <header class="header">
     <h1 class="logo">Site Name</h1>
     <div @click="handleIconThreeBarsClick" class="iconThreeBars">
-      <PfoIconThreeBars />
+      <PfoIconThreeBars v-if="!isDrawerMenuOpened" />
     </div>
   </header>
 </template>
