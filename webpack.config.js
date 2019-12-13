@@ -43,7 +43,7 @@ module.exports = {
               plugins: [
                 require('postcss-import'),
                 require('postcss-custom-media')({
-                  importFrom: './src/css/foundation/custom-media.css'
+                  importFrom: './src/css/foundation/media-query.css'
                 }),
                 require('postcss-nested'),
                 require('autoprefixer')
