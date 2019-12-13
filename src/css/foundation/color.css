@@ -17,14 +17,4 @@
 
   /* border color */
   --bdc-primary: #3d3d3d;
-
-  /* line height */
-  --lh-large: 1.8;
-  --lh-medium: 1.5;
-  --lh-small: 1.2;
-
-  /* media queries */
-  @custom-media --mq-mobile (max-width: 639px);
-  @custom-media --mq-tablet (max-width: 1023px);
-  @custom-media --mq-desktop (min-width: 1024px);
 }

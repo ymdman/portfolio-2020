@@ -2,5 +2,7 @@
 
 /* Foundation */
 @import "modern-css-reset";
-@import "./foundation/variable.css";
+@import "./foundation/custom-media.css";
+@import "./foundation/color.css";
+@import "./foundation/line-height.css";
 @import "./foundation/base.css";
