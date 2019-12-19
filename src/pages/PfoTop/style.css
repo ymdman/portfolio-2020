@@ -1,0 +1,17 @@
+.hero {
+  height: 100vh;
+  background-color: chocolate;
+  margin-right: calc(((100vw - 100%) / 2) * -1);
+  margin-left: calc(((100vw - 100%) / 2) * -1);
+  padding-right: calc((100vw - 100%) / 2);
+  padding-left: calc((100vw - 100%) / 2);
+}
+
+.content {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.title {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
