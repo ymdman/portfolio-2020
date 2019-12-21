@@ -1,12 +1,17 @@
 {
   "compilerOptions": {
+    // ECMAScriptのターゲットバージョンを指定する。
     "target": "es5",
+    // モジュールコード生成を指定する。
     "module": "es2015",
+    // すべて(↓)の厳密な型チェックオプションを有効にする。
+    // noImplicitAny, noImplicitThis, alwaysStrict, strictBindCallApply, strictNullChecks, strictFunctionTypes, strictPropertyInitialization
     "strict": true,
-    "noImplicitThis": true,
+    // モジュールの解決方法を決定する。
     "moduleResolution": "node",
+    // デフォルトのエクスポートのないモジュールからのデフォルトのインポートを許可する。コードの出力には影響せず型チェックのみする。
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
+    // ESデコレータの実験的なサポートを有効にする。
     "experimentalDecorators": true
   }
 }
