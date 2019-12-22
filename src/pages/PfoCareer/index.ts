@@ -9,10 +9,14 @@ import PfoLazyLoadImg from '../../components/PfoLazyLoadImg/index.vue';
 })
 export default class Career extends Vue {
   created(): void {
-    career.fetchList();
+    career.fetchData();
   }
 
   get list(): string[] | number[] {
     return career.list;
+  }
+
+  get description(): string {
+    return career.description;
   }
 }

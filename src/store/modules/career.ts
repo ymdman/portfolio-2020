@@ -15,12 +15,16 @@ import store from '../index';
 })
 class Career extends VuexModule {
   _list = [];
+  _description = '';
 
   @Action
-  fetchList(): void {
+  fetchData(): void {
     fetch('./api/career.json')
       .then(res => res.json())
-      .then(list => this.addList(list))
+      .then(res => {
+        this.addList(res.list);
+        this.addDescription(res.description);
+      })
       .catch(err => {
         console.error(err);
       });
@@ -31,8 +35,17 @@ class Career extends VuexModule {
     this._list = list;
   }
 
+  @Mutation
+  addDescription(description: string): void {
+    this._description = description;
+  }
+
   get list(): string[] | number[] {
     return this._list;
+  }
+
+  get description(): string {
+    return this._description;
   }
 }
 
