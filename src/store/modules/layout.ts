@@ -20,7 +20,7 @@ class Layout extends VuexModule {
 
   @Action
   updateSize(): void {
-    this.context.commit('layout');
+    this.layout();
   }
 
   @Mutation

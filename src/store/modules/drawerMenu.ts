@@ -14,20 +14,20 @@ import store from '../index';
   name: 'drawerMenu'
 })
 class DrawerMenu extends VuexModule {
-  isOpen = false;
+  _isOpened = false;
 
   @Action
   toggle(): void {
-    this.context.commit('drawerMenu');
+    this.drawerMenu();
   }
 
   @Mutation
   drawerMenu(): void {
-    this.isOpen = !this.isOpen;
+    this._isOpened = !this._isOpened;
   }
 
   get isOpened(): boolean {
-    return this.isOpen;
+    return this._isOpened;
   }
 }
 
