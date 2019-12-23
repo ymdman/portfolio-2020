@@ -1,0 +1,28 @@
+.c-title {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  line-height: var(--lh-small);
+
+  &--level-1 {
+    font-size: var(--fs-xxxxx-large);
+  }
+
+  &--level-2 {
+    font-size: var(--fs-xxxx-large);
+  }
+
+  &--level-3 {
+    font-size: var(--fs-xxx-large);
+  }
+
+  &--level-4 {
+    font-size: var(--fs-xx-large);
+  }
+
+  &--level-5 {
+    font-size: var(--fs-x-large);
+  }
+
+  &--level-6 {
+    font-size: var(--fs-large);
+  }
+}
