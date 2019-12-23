@@ -35,7 +35,7 @@
           <li class="item">
             <router-link
               @click.native="handleRouterLinkClick"
-              to="/career"
+              to="/works"
               class="anchor"
             >
               Works

@@ -1,5 +1,5 @@
 import { Component, Vue } from 'vue-property-decorator';
-import career from '../../store/modules/career';
+import works from '../../store/modules/works';
 import PfoLazyLoadImg from '../../components/PfoLazyLoadImg/index.vue';
 
 @Component({
@@ -7,16 +7,16 @@ import PfoLazyLoadImg from '../../components/PfoLazyLoadImg/index.vue';
     PfoLazyLoadImg
   }
 })
-export default class Career extends Vue {
+export default class Works extends Vue {
   created(): void {
-    career.fetchData();
+    works.fetchData();
   }
 
   get list(): string[] | number[] {
-    return career.list;
+    return works.list;
   }
 
   get description(): string {
-    return career.description;
+    return works.description;
   }
 }

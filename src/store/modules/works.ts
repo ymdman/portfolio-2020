@@ -11,15 +11,15 @@ import store from '../index';
   dynamic: true,
   store,
   namespaced: true,
-  name: 'career'
+  name: 'works'
 })
-class Career extends VuexModule {
+class Works extends VuexModule {
   _list = [];
   _description = '';
 
   @Action
   fetchData(): void {
-    fetch('./api/career.json')
+    fetch('./api/works.json')
       .then(res => res.json())
       .then(res => {
         this.addList(res.list);
@@ -49,4 +49,4 @@ class Career extends VuexModule {
   }
 }
 
-export default getModule(Career);
+export default getModule(Works);
