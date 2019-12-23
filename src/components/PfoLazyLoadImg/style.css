@@ -1,10 +1,4 @@
-.footer {
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-
-.copyright {
-  display: block;
-  text-align: center;
-  font-size: var(--fs-xx-small);
+.image {
+  width: 100%;
+  height: auto;
 }

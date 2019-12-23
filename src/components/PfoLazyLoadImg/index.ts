@@ -5,6 +5,12 @@ export default class PfoLazyLoadImg extends Vue {
   @Prop({ type: String, required: true })
   src!: string;
 
+  @Prop({ type: Number })
+  width!: number;
+
+  @Prop({ type: Number })
+  height!: number;
+
   isLoadingSupported = 'loading' in HTMLImageElement.prototype;
   io = {} as IntersectionObserver;
 

@@ -1,9 +1,10 @@
 <template>
   <img
     :src="isLoadingSupported && src"
+    :width="width"
+    :height="height"
     loading="lazy"
-    width="500"
-    height="1000"
+    class="image"
   />
 </template>
 
