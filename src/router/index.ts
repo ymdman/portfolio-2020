@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import location from '../store/modules/location';
 import Skill from '../pages/PfoSkill/index.vue';
 import Top from '../pages/PfoTop/index.vue';
 import Works from '../pages/PfoWorks/index.vue';
@@ -12,17 +13,29 @@ export default new VueRouter({
     {
       path: '/skill',
       name: 'skill',
-      component: Skill
+      component: Skill,
+      beforeEnter: (to, from, next): void => {
+        location.update(to);
+        next();
+      }
     },
     {
       path: '/',
       name: 'top',
-      component: Top
+      component: Top,
+      beforeEnter: (to, from, next): void => {
+        location.update(to);
+        next();
+      }
     },
     {
       path: '/works',
       name: 'works',
-      component: Works
+      component: Works,
+      beforeEnter: (to, from, next): void => {
+        location.update(to);
+        next();
+      }
     }
   ]
 });
