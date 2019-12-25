@@ -1,10 +1,10 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import location from '../store/modules/location';
-import NotFound from '../pages/PfoNotFound/index.vue';
-import Skill from '../pages/PfoSkill/index.vue';
-import Top from '../pages/PfoTop/index.vue';
-import Works from '../pages/PfoWorks/index.vue';
+import NotFound from '../pages/NotFound/index.vue';
+import Skill from '../pages/Skill/index.vue';
+import Top from '../pages/Top/index.vue';
+import Works from '../pages/Works/index.vue';
 
 Vue.use(VueRouter);
 

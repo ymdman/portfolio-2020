@@ -1,8 +1,8 @@
 <template>
   <header class="header">
     <h1 class="logo">Site Name</h1>
-    <div @click="handleIconThreeBarsClick" class="iconThreeBars">
-      <PfoIconThreeBars v-if="!isDrawerMenuOpened" />
+    <div class="iconThreeBars" @click="handleIconThreeBarsClick">
+      <v-icon-three-bars v-if="!isDrawerMenuOpened" />
     </div>
   </header>
 </template>

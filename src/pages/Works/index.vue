@@ -22,7 +22,7 @@
           >
             <figure class="project__detail">
               <div class="project__image">
-                <PfoLazyLoadImg
+                <v-lazy-load-img
                   :src="project.image.src"
                   :alt="project.image.alt"
                   :width="600"

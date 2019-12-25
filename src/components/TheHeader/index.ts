@@ -1,13 +1,13 @@
 import { Component, Vue } from 'vue-property-decorator';
 import drawerMenu from '../../store/modules/drawerMenu';
-import PfoIconThreeBars from '../../components/PfoIcons/threeBars.vue';
+import VIconThreeBars from '../../components/VIcons/threeBars.vue';
 
 @Component({
   components: {
-    PfoIconThreeBars
+    VIconThreeBars
   }
 })
-export default class PfoHeader extends Vue {
+export default class TheHeader extends Vue {
   text = 'Header component';
 
   get isDrawerMenuOpened(): boolean {

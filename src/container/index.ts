@@ -1,14 +1,14 @@
 import { Component, Vue } from 'vue-property-decorator';
 import layout from '../store/modules/layout';
-import PfoDrawerMenu from '../components/PfoDrawerMenu/index.vue';
-import PfoFooter from '../components/PfoFooter/index.vue';
-import PfoHeader from '../components/PfoHeader/index.vue';
+import TheDrawerMenu from '../components/TheDrawerMenu/index.vue';
+import TheFooter from '../components/TheFooter/index.vue';
+import TheHeader from '../components/TheHeader/index.vue';
 
 @Component({
   components: {
-    PfoDrawerMenu,
-    PfoFooter,
-    PfoHeader
+    TheDrawerMenu,
+    TheFooter,
+    TheHeader
   }
 })
 export default class Container extends Vue {

@@ -2,41 +2,41 @@
   <div class="drawerMenu">
     <transition name="overlay">
       <div
-        @click="handleOverlayClick"
         v-show="isDrawerMenuOpened"
         class="overlay"
+        @click="handleOverlayClick"
       />
     </transition>
     <transition name="nav">
       <nav v-show="isDrawerMenuOpened" class="nav">
-        <div @click="handleIconXClick" class="iconX">
-          <PfoIconX />
+        <div class="iconX" @click="handleIconXClick">
+          <v-icon-x />
         </div>
         <h2 class="title">Menu</h2>
         <ul class="items">
           <li class="item">
             <router-link
-              @click.native="handleRouterLinkClick"
               to="/"
               class="anchor"
+              @click.native="handleRouterLinkClick"
             >
               About
             </router-link>
           </li>
           <li class="item">
             <router-link
-              @click.native="handleRouterLinkClick"
               to="/skill"
               class="anchor"
+              @click.native="handleRouterLinkClick"
             >
               Skill
             </router-link>
           </li>
           <li class="item">
             <router-link
-              @click.native="handleRouterLinkClick"
               to="/works"
               class="anchor"
+              @click.native="handleRouterLinkClick"
             >
               Works
             </router-link>

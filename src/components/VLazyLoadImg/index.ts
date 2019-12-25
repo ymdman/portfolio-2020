@@ -1,7 +1,7 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
-export default class PfoLazyLoadImg extends Vue {
+export default class VLazyLoadImg extends Vue {
   @Prop({ type: String, required: true })
   src!: string;
 

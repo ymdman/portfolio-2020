@@ -1,13 +1,13 @@
 import { Component, Vue } from 'vue-property-decorator';
 import drawerMenu from '../../store/modules/drawerMenu';
-import PfoIconX from '../PfoIcons/x.vue';
+import VIconX from '../VIcons/x.vue';
 
 @Component({
   components: {
-    PfoIconX
+    VIconX
   }
 })
-export default class PfoDrawerMenu extends Vue {
+export default class TheDrawerMenu extends Vue {
   get isDrawerMenuOpened(): boolean {
     return drawerMenu.isOpened;
   }

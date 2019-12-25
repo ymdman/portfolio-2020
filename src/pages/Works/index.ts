@@ -1,10 +1,10 @@
 import { Component, Vue } from 'vue-property-decorator';
 import works from '../../store/modules/works';
-import PfoLazyLoadImg from '../../components/PfoLazyLoadImg/index.vue';
+import VLazyLoadImg from '../../components/VLazyLoadImg/index.vue';
 
 @Component({
   components: {
-    PfoLazyLoadImg
+    VLazyLoadImg
   }
 })
 export default class Works extends Vue {

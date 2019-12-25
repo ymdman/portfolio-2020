@@ -1,13 +1,13 @@
 <template>
   <div class="container">
     <div class="body">
-      <pfo-header />
+      <the-header />
       <main>
         <router-view />
       </main>
-      <pfo-footer />
+      <the-footer />
     </div>
-    <PfoDrawerMenu />
+    <the-drawer-menu />
   </div>
 </template>
 
