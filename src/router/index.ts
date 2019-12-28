@@ -12,15 +12,6 @@ export default new VueRouter({
   mode: 'history',
   routes: [
     {
-      path: '/notfound',
-      name: 'notfound',
-      component: NotFound,
-      beforeEnter: (to, from, next): void => {
-        location.update(to);
-        next();
-      }
-    },
-    {
       path: '/skill',
       name: 'skill',
       component: Skill,
