@@ -1,9 +1,3 @@
-.section + .section {
-  margin-top: 80px;
-  padding-top: 80px;
-  border-top: solid 1px var(--bdc-tertiary);
-}
-
 .work-list {
   margin-top: 30px;
 
