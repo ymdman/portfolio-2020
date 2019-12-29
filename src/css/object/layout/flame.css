@@ -1,0 +1,12 @@
+.l-content {
+  margin-top: 80px;
+}
+
+.l-section + .l-section {
+  margin-top: 80px;
+
+  &--lined {
+    padding-top: 80px;
+    border-top: solid 1px var(--bdc-tertiary);
+  }
+}

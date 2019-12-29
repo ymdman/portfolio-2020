@@ -10,7 +10,7 @@
 @import "./foundation/base.css";
 
 /* Layout */
-@import "./object/layout/main.css";
+@import "./object/layout/flame.css";
 
 /* Object/Component */
 @import "./object/component/title.css";
