@@ -1,21 +1,21 @@
 <template>
   <div class="container">
-    <h1>Works</h1>
+    <h1 class="c-title c-title--level-1">Works</h1>
     <p>{{ description }}</p>
-    <div class="l-body">
+    <div class="l-content">
       <section
         v-for="item in list"
         :key="item.key"
         class="l-section l-section--lined"
       >
         <h2 class="c-title c-title--level-2">{{ item.companyName }}</h2>
-        <dl class="work-list">
-          <dt class="work-list__title">Job / 職種</dt>
-          <dd class="work-list__label">{{ item.job }}</dd>
-          <dt class="work-list__title">Status / 雇用形態</dt>
-          <dd class="work-list__label">{{ item.status }}</dd>
-          <dt class="work-list__title">Period / 期間</dt>
-          <dd class="work-list__label">{{ item.period }}</dd>
+        <dl class="summary-list">
+          <dt class="summary-list__title">Job / 職種</dt>
+          <dd class="summary-list__label">{{ item.job }}</dd>
+          <dt class="summary-list__title">Status / 雇用形態</dt>
+          <dd class="summary-list__label">{{ item.status }}</dd>
+          <dt class="summary-list__title">Period / 期間</dt>
+          <dd class="summary-list__label">{{ item.period }}</dd>
         </dl>
         <p class="description">{{ item.description }}</p>
         <div class="project">

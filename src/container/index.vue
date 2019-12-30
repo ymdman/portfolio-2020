@@ -2,7 +2,7 @@
   <div class="container">
     <div class="body">
       <the-header />
-      <main>
+      <main :class="{ main: !isTopPage }">
         <router-view />
       </main>
       <the-footer />

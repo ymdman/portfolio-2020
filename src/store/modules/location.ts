@@ -81,17 +81,17 @@ class Location extends VuexModule {
     return this.route.query;
   }
 
-  get isTop(): boolean {
+  get isTopPage(): boolean {
     const path = this.route.path;
     return path === '/';
   }
 
-  get isSkill(): boolean {
+  get isSkillPage(): boolean {
     const path = this.route.path;
     return path === '/skill';
   }
 
-  get isWorks(): boolean {
+  get isWorksPage(): boolean {
     const path = this.route.path;
     return path === '/works';
   }

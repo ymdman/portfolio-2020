@@ -1,4 +1,4 @@
-.work-list {
+.summary-list {
   margin-top: 30px;
 
   &__title {
@@ -53,14 +53,7 @@
 }
 
 @media (--mq-mobile) {
-  .section + .section {
-    margin-top: 40px;
-    padding-top: 40px;
-  }
-
-  .project {
-    &__item {
-      flex-basis: calc(50% - 2%);
-    }
+  .project__item {
+    flex-basis: calc(50% - 2%);
   }
 }
