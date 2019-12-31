@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="l-container">
     <h1 class="c-title c-title--level-1">Works</h1>
     <p>{{ description }}</p>
     <div class="l-content">

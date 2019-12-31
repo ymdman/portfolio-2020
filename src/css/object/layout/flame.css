@@ -1,5 +1,9 @@
-.l-content {
+.l-container {
   margin-top: 80px;
+}
+
+.l-content {
+  margin-top: 100px;
 }
 
 .l-section + .l-section {
