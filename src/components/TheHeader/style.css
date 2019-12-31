@@ -2,7 +2,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 15%;
+  height: var(--layout-header-desktop-height);
+  padding-right: 15%;
+  padding-left: 15%;
   position: fixed;
   top: 0;
   right: 0;
