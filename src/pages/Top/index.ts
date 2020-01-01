@@ -1,9 +1,30 @@
 import { Component, Vue } from 'vue-property-decorator';
-import layout from '../../store/modules/layout';
+import about from '../../store/modules/about';
+import VLazyLoadImg from '../../components/VLazyLoadImg/index.vue';
+import VIconGitHub from '../../components/VIcons/github.vue';
+import VIconQiita from '../../components/VIcons/qiita.vue';
 
-@Component
+@Component({
+  components: {
+    VLazyLoadImg,
+    VIconGitHub,
+    VIconQiita
+  }
+})
 export default class Top extends Vue {
-  get windowHeight(): number {
-    return layout.windowHeight;
+  created(): void {
+    about.fetchData();
+  }
+
+  get description(): string {
+    return about.description;
+  }
+
+  get pointList(): string[] {
+    return about.pointList;
+  }
+
+  get profile(): {} {
+    return about.profile;
   }
 }
