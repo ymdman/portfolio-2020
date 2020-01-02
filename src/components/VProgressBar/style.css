@@ -1,0 +1,14 @@
+.progress-bar {
+  width: 100%;
+  height: 15px;
+  background-color: var(--bdc-quaternary);
+  position: relative;
+}
+
+.progress-bar-inner {
+  width: 0;
+  height: inherit;
+  background-color: #2ecc71;
+  transition: width 900ms ease-in;
+  transition-delay: 600ms;
+}

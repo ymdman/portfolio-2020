@@ -1,0 +1,32 @@
+.programming-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -20px;
+  margin-left: -20px;
+
+  &__item {
+    width: calc(50% - 20px);
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  &__progress-bar {
+    margin-top: 5px;
+  }
+}
+
+.detail-list {
+  margin-top: 30px;
+
+  &__title {
+    font-weight: bold;
+  }
+
+  &__text {
+    margin-top: 3px;
+  }
+
+  &__text + &__title {
+    margin-top: 20px;
+  }
+}
