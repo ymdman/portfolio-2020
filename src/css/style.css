@@ -11,7 +11,7 @@
 @import "./foundation/base.css";
 
 /* Layout */
-@import "./object/layout/content.css";
+@import "./layout/content.css";
 
 /* Object/Component */
 @import "./object/component/title.css";
