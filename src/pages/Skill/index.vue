@@ -24,9 +24,9 @@
         </ul>
         <dl class="detail-list">
           <template v-for="item in skillDetailList">
-            <dt :key="item.title" class="detail-list__title">
+            <h3 :key="item.title" class="detail-list__title">
               {{ item.title }}
-            </dt>
+            </h3>
             <dd :key="item.text" class="detail-list__text">
               {{ item.text }}
             </dd>
