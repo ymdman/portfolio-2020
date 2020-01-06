@@ -1,3 +1,11 @@
-.label {
+.section {
   text-align: center;
+}
+
+.title {
+  font-size: var(--fs-xxx-large);
+}
+
+.text {
+  margin-top: 50px;
 }

@@ -1,7 +1,9 @@
 <template>
-  <div>
-    <h2 class="title">404 Not Found</h2>
-    <p class="label">お探しのページが見つかりませんでした。</p>
+  <div class="l-content">
+    <section class="section">
+      <h1 class="title">404 Not Found</h1>
+      <p class="text">お探しのページが見つかりませんでした。</p>
+    </section>
   </div>
 </template>
 
