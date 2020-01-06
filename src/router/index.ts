@@ -8,6 +8,11 @@ import Works from '../pages/Works/index.vue';
 
 Vue.use(VueRouter);
 
+type Position = {
+  x: number;
+  y: number;
+};
+
 export default new VueRouter({
   mode: 'history',
   routes: [
@@ -47,5 +52,12 @@ export default new VueRouter({
         next();
       }
     }
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition): Position {
+    if (savedPosition) {
+      return savedPosition;
+    } else {
+      return { x: 0, y: 0 };
+    }
+  }
 });
