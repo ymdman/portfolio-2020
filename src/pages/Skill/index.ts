@@ -16,15 +16,11 @@ export default class Skill extends Vue {
     return skill.description;
   }
 
-  get programmingList(): string[] | number[] {
-    return skill.programmingList;
+  get programming(): {} {
+    return skill.programming;
   }
 
-  get skillDetailList(): string[] {
-    return skill.skillDetailList;
-  }
-
-  get toolList(): string[] {
-    return skill.toolList;
+  get tool(): {} {
+    return skill.tool;
   }
 }

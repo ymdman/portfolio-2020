@@ -14,9 +14,8 @@ import store from '../index';
   name: 'skill'
 })
 class Skill extends VuexModule {
-  _programmingList = [];
-  _skillDetailList = [];
-  _toolList = [];
+  _programming = {};
+  _tool = {};
   _description = '';
 
   @Action
@@ -24,9 +23,8 @@ class Skill extends VuexModule {
     fetch('./api/skill.json')
       .then(res => res.json())
       .then(res => {
-        this.addProgramming(res.programmingList);
-        this.addSkillDetail(res.skillDetailList);
-        this.addTool(res.toolList);
+        this.addProgramming(res.programming);
+        this.addTool(res.tool);
         this.addDescription(res.description);
       })
       .catch(err => {
@@ -35,18 +33,13 @@ class Skill extends VuexModule {
   }
 
   @Mutation
-  addProgramming(programmingList: []): void {
-    this._programmingList = programmingList;
+  addProgramming(programming: {}): void {
+    this._programming = programming;
   }
 
   @Mutation
-  addSkillDetail(skillDetailList: []): void {
-    this._skillDetailList = skillDetailList;
-  }
-
-  @Mutation
-  addTool(toolList: []): void {
-    this._toolList = toolList;
+  addTool(tool: {}): void {
+    this._tool = tool;
   }
 
   @Mutation
@@ -54,16 +47,12 @@ class Skill extends VuexModule {
     this._description = description;
   }
 
-  get programmingList(): string[] | number[] {
-    return this._programmingList;
+  get programming(): {} {
+    return this._programming;
   }
 
-  get skillDetailList(): string[] {
-    return this._skillDetailList;
-  }
-
-  get toolList(): string[] {
-    return this._toolList;
+  get tool(): {} {
+    return this._tool;
   }
 
   get description(): string {

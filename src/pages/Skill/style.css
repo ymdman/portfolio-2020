@@ -1,10 +1,12 @@
-.programming-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: -20px;
-  margin-left: -20px;
+.programming {
+  &__type-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -20px;
+    margin-left: -20px;
+  }
 
-  &__item {
+  &__type-list-item {
     width: calc(50% - 20px);
     margin-top: 20px;
     margin-left: 20px;
@@ -13,20 +15,42 @@
   &__progress-bar {
     margin-top: 5px;
   }
-}
 
-.detail-list {
-  margin-top: 30px;
-
-  &__title {
-    font-size: var(--fs-medium);
+  &__detail-list {
+    margin-top: 30px;
   }
 
-  &__text {
+  &__detail-title {
+    font-size: var(--fs-medium);
+    font-weight: bold;
+  }
+
+  &__detail-text {
     margin-top: 3px;
   }
 
-  &__text + &__title {
+  &__detail-text + &__detail-title {
+    margin-top: 20px;
+  }
+}
+
+.tool {
+  &__list {
+    margin-top: -10px;
+    margin-left: -10px;
+  }
+
+  &__list-item {
+    display: inline-block;
+    background-color: tomato;
+    color: #fff;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 5px 15px;
+  }
+
+  &__text {
     margin-top: 20px;
   }
 }
