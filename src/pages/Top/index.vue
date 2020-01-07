@@ -7,15 +7,18 @@
       <section class="l-content__section">
         <h1 class="c-title c-title--level-1">About</h1>
         <div class="l-content__body">
+          <!-- eslint-disable vue/no-v-html -->
           <p v-html="description" />
         </div>
       </section>
       <section class="l-content__section">
         <h2 class="c-title c-title--level-2">Point</h2>
         <div class="l-content__body">
-          <ul class="point-list">
-            <li v-for="item in pointList" :key="item">{{ item }}</li>
-          </ul>
+          <div class="point">
+            <ul class="point__list">
+              <li v-for="item in pointList" :key="item">{{ item }}</li>
+            </ul>
+          </div>
         </div>
       </section>
       <section class="l-content__section l-content__section--lined">

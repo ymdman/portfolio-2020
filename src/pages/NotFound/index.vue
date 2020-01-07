@@ -1,9 +1,11 @@
 <template>
   <div class="l-content">
-    <section class="section">
-      <h1 class="title">404 Not Found</h1>
-      <p class="text">お探しのページが見つかりませんでした。</p>
-    </section>
+    <div class="l-content__section l-content__section--centered">
+      <h1 class="c-title c-title--level-1">404 Not Found</h1>
+      <div class="l-content__body">
+        <p>お探しのページが見つかりませんでした。</p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -12,8 +14,3 @@
   import VueComponent from './index';
   export default VueComponent;
 </script>
-
-<!-- prettier-ignore -->
-<style scoped>
-  @import './style';
-</style>

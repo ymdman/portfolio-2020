@@ -1,12 +1,18 @@
 .l-content {
   margin-top: 80px;
 
-  &__section + &__section {
-    margin-top: 80px;
+  &__section {
+    & + & {
+      margin-top: 80px;
 
-    &--lined {
-      padding-top: 80px;
-      border-top: solid 1px var(--bdc-tertiary);
+      &--lined {
+        padding-top: 80px;
+        border-top: solid 1px var(--bdc-tertiary);
+      }
+    }
+
+    &--centered {
+      text-align: center;
     }
   }
 

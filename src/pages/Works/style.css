@@ -1,57 +1,59 @@
-.summary-list {
-  &__title {
+.work {
+  &__description {
+    margin-top: 30px;
+  }
+
+  &__summary-title {
     font-weight: bold;
   }
 
-  &__label + &__title {
+  &__summary-text + &__summary-title {
     margin-top: 10px;
   }
-}
 
-.description {
-  margin-top: 30px;
-}
+  &__project {
+    margin-top: 30px;
+  }
 
-.project {
-  margin-top: 30px;
-
-  &__list {
+  &__project-list {
     display: flex;
     flex-wrap: wrap;
     margin-top: -20px;
     margin-left: -2%;
   }
 
-  &__detail {
-    cursor: pointer;
-  }
-
-  &__item {
+  &__project-item {
     flex-basis: calc(33.3% - 2%);
     margin-top: 20px;
     margin-left: 2%;
   }
 
-  &__image {
+  &__project-detail {
+    cursor: pointer;
+  }
+
+  &__project-image {
     border: solid 1px var(--bdc-tertiary);
   }
 
-  &__caption {
+  &__project-caption {
     font-family: "Yanone Kaffeesatz", sans-serif;
     margin-top: 3px;
   }
 
-  &__detail:hover &__image {
+  &__project-detail:hover &__project-image {
     border-color: var(--color-theme);
   }
 
-  &__detail:hover &__caption {
+  &__project-detail:hover &__project-caption {
     color: var(--color-theme);
   }
 }
 
 @media (--mq-mobile) {
-  .project__item {
-    flex-basis: calc(50% - 2%);
+  .work {
+    &__project-item {
+      flex-basis: calc(50% - 2%);
+    }
   }
 }

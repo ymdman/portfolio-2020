@@ -6,7 +6,7 @@
     margin-left: -20px;
   }
 
-  &__type-list-item {
+  &__type-item {
     width: calc(50% - 20px);
     margin-top: 20px;
     margin-left: 20px;
@@ -40,7 +40,7 @@
     margin-left: -10px;
   }
 
-  &__list-item {
+  &__item {
     display: inline-block;
     background-color: tomato;
     color: #fff;

@@ -9,12 +9,12 @@
     <section class="l-content__section">
       <h2 class="c-title c-title--level-2">Programming + Library</h2>
       <div class="l-content__body">
-        <div class="progiraming">
+        <div class="programming">
           <ul class="programming__type-list">
             <li
               v-for="item in programming.typeList"
               :key="item.key"
-              class="programming__type-list-item"
+              class="programming__type-item"
             >
               <div>{{ item.language }}</div>
               <v-progress-bar
@@ -41,7 +41,7 @@
       <div class="l-content__body">
         <div class="tool">
           <ul class="tool__list">
-            <li v-for="item in tool.list" :key="item" class="tool__list-item">
+            <li v-for="item in tool.list" :key="item" class="tool__item">
               {{ item }}
             </li>
           </ul>
