@@ -5,6 +5,7 @@ import NotFound from '../pages/NotFound/index.vue';
 import Skill from '../pages/Skill/index.vue';
 import Top from '../pages/Top/index.vue';
 import Works from '../pages/Works/index.vue';
+import Work from '../pages/Work/index.vue';
 
 Vue.use(VueRouter);
 
@@ -38,6 +39,15 @@ export default new VueRouter({
       path: '/works',
       name: 'works',
       component: Works,
+      beforeEnter: (to, from, next): void => {
+        location.update(to);
+        next();
+      }
+    },
+    {
+      path: '/works/:id',
+      name: 'work',
+      component: Work,
       beforeEnter: (to, from, next): void => {
         location.update(to);
         next();

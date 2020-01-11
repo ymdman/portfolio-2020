@@ -30,19 +30,21 @@
                 :key="project.key"
                 class="work__project-item"
               >
-                <figure class="work__project-detail">
-                  <div class="work__project-image">
-                    <v-lazy-load-img
-                      :src="project.image.src"
-                      :alt="project.image.alt"
-                      :width="600"
-                      :height="400"
-                    />
-                  </div>
-                  <figcaption class="work__project-caption">
-                    {{ project.siteName }}
-                  </figcaption>
-                </figure>
+                <router-link :to="`/works/${project.key}`">
+                  <figure class="work__project-detail">
+                    <div class="work__project-image">
+                      <v-lazy-load-img
+                        :src="project.image.src"
+                        :alt="project.image.alt"
+                        :width="600"
+                        :height="400"
+                      />
+                    </div>
+                    <figcaption class="work__project-caption">
+                      {{ project.siteName }}
+                    </figcaption>
+                  </figure>
+                </router-link>
               </li>
             </ul>
           </div>
