@@ -1,5 +1,5 @@
 <template>
-  <div class="drawerMenu">
+  <div class="drawer-menu">
     <transition name="overlay">
       <div
         v-show="isDrawerMenuOpened"
@@ -9,7 +9,7 @@
     </transition>
     <transition name="nav">
       <nav v-show="isDrawerMenuOpened" class="nav">
-        <div class="iconX" @click="handleIconXClick">
+        <div class="icon-x" @click="handleIconXClick">
           <v-icon-x />
         </div>
         <h2 class="title">Menu</h2>
