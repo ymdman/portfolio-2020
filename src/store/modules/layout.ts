@@ -19,12 +19,15 @@ class Layout extends VuexModule {
   height = window.innerHeight;
 
   @Action
-  updateSize(): void {
-    this.layout();
+  updateSize(width: number, height: number): void {
+    this.layout(width, height);
   }
 
   @Mutation
-  layout(): void {
+  layout(width: number, height: number): void {
+    this.width = width;
+    this.height = height;
+
     if (this.width > 640) {
       this.type = 'desktop';
     } else {
