@@ -7,6 +7,7 @@
 @import "./foundation/font-size.css";
 @import "./foundation/line-height.css";
 @import "./foundation/layout.css";
+@import "./foundation/z-index.css";
 @import "./foundation/media-query.css";
 @import "./foundation/base.css";
 
