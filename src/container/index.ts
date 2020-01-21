@@ -36,6 +36,10 @@ export default class Container extends Vue {
     return location.isTopPage;
   }
 
+  get isWorkPage(): boolean {
+    return location.isWorkPage;
+  }
+
   handleWindowResize(): void {
     const width = window.innerWidth;
     const height = window.innerHeight;

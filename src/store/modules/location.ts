@@ -95,6 +95,11 @@ class Location extends VuexModule {
     const path = this.route.path;
     return path === '/works';
   }
+
+  get isWorkPage(): boolean {
+    const name = this.route.name;
+    return name === 'work';
+  }
 }
 
 export default getModule(Location);
