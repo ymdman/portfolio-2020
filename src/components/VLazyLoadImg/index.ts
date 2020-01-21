@@ -5,6 +5,9 @@ export default class VLazyLoadImg extends Vue {
   @Prop({ type: String, required: true })
   src!: string;
 
+  @Prop({ type: String, required: true })
+  alt!: string;
+
   @Prop({ type: Number })
   width!: number;
 

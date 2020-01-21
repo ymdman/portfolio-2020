@@ -1,6 +1,7 @@
 <template>
   <img
     :src="isLoadingSupported && src"
+    :alt="alt"
     :width="width"
     :height="height"
     loading="lazy"
