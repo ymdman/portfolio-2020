@@ -44,6 +44,7 @@
     "webpack-dev-server": "^3.10.1"
   },
   "dependencies": {
+    "bowser": "^2.8.1",
     "modern-css-reset": "^1.0.4",
     "vue": "^2.6.11",
     "vue-property-decorator": "^8.3.0",

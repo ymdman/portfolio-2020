@@ -1,7 +1,11 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
+import userAgent from '../../store/modules/userAgent';
 
 @Component
 export default class VLazyLoadImg extends Vue {
+  isLoadingSupported = 'loading' in HTMLImageElement.prototype;
+  io = {} as IntersectionObserver;
+
   @Prop({ type: String, required: true })
   src!: string;
 
@@ -14,11 +18,12 @@ export default class VLazyLoadImg extends Vue {
   @Prop({ type: Number })
   height!: number;
 
-  isLoadingSupported = 'loading' in HTMLImageElement.prototype;
-  io = {} as IntersectionObserver;
-
   mounted(): void {
-    if (!this.isLoadingSupported) {
+    this.observe();
+  }
+
+  beforeUpdate(): void {
+    if (this.isFirefox) {
       this.observe();
     }
   }
@@ -27,6 +32,10 @@ export default class VLazyLoadImg extends Vue {
     if (!this.isLoadingSupported) {
       this.unobserve();
     }
+  }
+
+  get isFirefox(): boolean {
+    return userAgent.isFirefox;
   }
 
   observe(): void {
