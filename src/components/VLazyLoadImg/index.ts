@@ -1,5 +1,4 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
-import userAgent from '../../store/modules/userAgent';
 
 @Component
 export default class VLazyLoadImg extends Vue {
@@ -19,11 +18,7 @@ export default class VLazyLoadImg extends Vue {
   height!: number;
 
   mounted(): void {
-    this.observe();
-  }
-
-  beforeUpdate(): void {
-    if (this.isFirefox) {
+    if (!this.isLoadingSupported) {
       this.observe();
     }
   }
@@ -32,10 +27,6 @@ export default class VLazyLoadImg extends Vue {
     if (!this.isLoadingSupported) {
       this.unobserve();
     }
-  }
-
-  get isFirefox(): boolean {
-    return userAgent.isFirefox;
   }
 
   observe(): void {
