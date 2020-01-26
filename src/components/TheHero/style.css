@@ -10,19 +10,16 @@
 
 .title {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto;
-  height: max-content;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-family: "Yanone Kaffeesatz", sans-serif;
   font-size: var(--fs-xxxxxx-large);
   line-height: var(--lh-small);
+  text-align: center;
   width: 100%;
   padding-right: 20px;
   padding-left: 20px;
-  text-align: center;
   animation: fade-in 600ms ease-in;
 }
 
@@ -52,17 +49,5 @@
 @media (--mq-mobile) {
   .title {
     font-size: var(--fs-xxxxx-large);
-  }
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(60px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }

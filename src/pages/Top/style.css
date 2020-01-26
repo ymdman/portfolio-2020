@@ -1,12 +1,3 @@
-.hero {
-  height: 100vh;
-  background-color: chocolate;
-  margin-right: calc(((100vw - 100%) / 2) * -1);
-  margin-left: calc(((100vw - 100%) / 2) * -1);
-  padding-right: calc((100vw - 100%) / 2);
-  padding-left: calc((100vw - 100%) / 2);
-}
-
 .point {
   &__list {
     list-style: disc;

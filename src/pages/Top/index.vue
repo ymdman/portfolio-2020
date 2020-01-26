@@ -1,8 +1,10 @@
 <template>
   <div>
-    <div class="hero">
-      Lorem, ipsum dolor.
-    </div>
+    <the-hero
+      :src="'/images/top/img-main-visual.jpg'"
+      :alt="'aaa'"
+      :title="'KAZUHIRO YAMADA'"
+    />
     <div class="l-content">
       <section class="l-content__section">
         <h1 class="c-title c-title--level-1">About</h1>
