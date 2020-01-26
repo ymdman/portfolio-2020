@@ -8,8 +8,6 @@ import VIconThreeBars from '../../components/VIcons/threeBars.vue';
   }
 })
 export default class TheHeader extends Vue {
-  text = 'Header component';
-
   get isDrawerMenuOpened(): boolean {
     return drawerMenu.isOpened;
   }
