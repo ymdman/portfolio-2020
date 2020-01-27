@@ -30,7 +30,10 @@
                 :key="project.key"
                 class="work__project-item"
               >
-                <router-link :to="`/works/${project.key}`">
+                <router-link
+                  :to="`/works/${project.key}`"
+                  class="work__project-anchor"
+                >
                   <figure class="work__project-detail">
                     <div class="work__project-image">
                       <v-lazy-load-img

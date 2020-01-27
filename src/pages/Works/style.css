@@ -28,6 +28,11 @@
     margin-left: 2%;
   }
 
+  &__project-anchor {
+    color: var(--fc-primary);
+    text-decoration: none;
+  }
+
   &__project-detail {
     cursor: pointer;
   }
