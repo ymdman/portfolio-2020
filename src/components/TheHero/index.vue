@@ -1,14 +1,8 @@
 <template>
   <div class="hero">
-    <v-lazy-load-img
-      :src="src"
-      :alt="alt"
-      :width="1200"
-      :height="800"
-      class="image"
-    />
+    <img :src="updatedSrc" :alt="updatedAlt" class="image" />
     <div class="overlay" />
-    <h1 class="title">{{ title }}</h1>
+    <h1 class="title">{{ updatedTitle }}</h1>
   </div>
 </template>
 
