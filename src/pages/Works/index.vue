@@ -13,29 +13,29 @@
     >
       <h2 class="c-title c-title--level-2">{{ item.companyName }}</h2>
       <div class="l-content__body">
-        <div class="work">
-          <dl class="work__summary-list">
-            <dt class="work__summary-title">Job / 職種</dt>
-            <dd class="work__summary-text">{{ item.job }}</dd>
-            <dt class="work__summary-title">Status / 雇用形態</dt>
-            <dd class="work__summary-text">{{ item.status }}</dd>
-            <dt class="work__summary-title">Period / 期間</dt>
-            <dd class="work__summary-text">{{ item.period }}</dd>
+        <div class="works">
+          <dl class="works__summary-list">
+            <dt class="works__summary-title">Job / 職種</dt>
+            <dd class="works__summary-text">{{ item.job }}</dd>
+            <dt class="works__summary-title">Status / 雇用形態</dt>
+            <dd class="works__summary-text">{{ item.status }}</dd>
+            <dt class="works__summary-title">Period / 期間</dt>
+            <dd class="works__summary-text">{{ item.period }}</dd>
           </dl>
-          <p class="work__description">{{ item.description }}</p>
-          <div class="work__project">
-            <ul class="work__project-list">
+          <p class="works__description">{{ item.description }}</p>
+          <div class="works__project">
+            <ul class="works__project-list">
               <li
                 v-for="project in item.projects"
                 :key="project.key"
-                class="work__project-item"
+                class="works__project-item"
               >
                 <router-link
                   :to="`/works/${project.key}`"
-                  class="work__project-anchor"
+                  class="works__project-anchor"
                 >
-                  <figure class="work__project-detail">
-                    <div class="work__project-image">
+                  <figure class="works__project-detail">
+                    <div class="works__project-image">
                       <v-lazy-load-img
                         :src="project.image.src"
                         :alt="project.image.alt"
@@ -43,7 +43,7 @@
                         :height="400"
                       />
                     </div>
-                    <figcaption class="work__project-caption">
+                    <figcaption class="works__project-caption">
                       {{ project.siteName }}
                     </figcaption>
                   </figure>
