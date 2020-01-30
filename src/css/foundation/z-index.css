@@ -1,4 +1,5 @@
 :root {
   /* z-index */
   --z-index-header: 1;
+  --z-index-drawer-menu: 2;
 }
