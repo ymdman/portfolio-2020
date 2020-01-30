@@ -41,14 +41,8 @@ class Work extends VuexModule {
     site: {
       name: '',
       img: [
-        {
-          src: '',
-          alt: ''
-        },
-        {
-          src: '',
-          alt: ''
-        }
+        { src: '', alt: '' },
+        { src: '', alt: '' }
       ]
     },
     charge: '',
@@ -57,25 +51,42 @@ class Work extends VuexModule {
   };
 
   @Action
-  fetchData(): void {
-    const id = store.getters['location/params'].id;
-
-    fetch(`./api/works/${id}.json`)
+  fetchData(id: string | undefined): void {
+    fetch(`/api/works/${id}.json`)
       .then(res => res.json())
       .then(res => {
-        this.addDetail(res);
+        this.updateDetail(res);
       })
       .catch(err => {
         console.error(err);
       });
   }
 
+  @Action
+  clearData(): void {
+    const detail: Detail = {
+      title: '',
+      description: '',
+      site: {
+        name: '',
+        img: [
+          { src: '', alt: '' },
+          { src: '', alt: '' }
+        ]
+      },
+      charge: '',
+      experience: '',
+      other: ''
+    };
+    this.updateDetail(detail);
+  }
+
   @Mutation
-  addDetail(detail: Detail): void {
+  updateDetail(detail: Detail): void {
     this._detail = detail;
   }
 
-  get detail(): {} {
+  get detail(): Detail {
     return this._detail;
   }
 }

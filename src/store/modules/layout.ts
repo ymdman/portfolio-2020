@@ -20,11 +20,11 @@ class Layout extends VuexModule {
 
   @Action
   updateSize(width: number, height: number): void {
-    this.layout(width, height);
+    this.updateLayout(width, height);
   }
 
   @Mutation
-  layout(width: number, height: number): void {
+  updateLayout(width: number, height: number): void {
     this.width = width;
     this.height = height;
 

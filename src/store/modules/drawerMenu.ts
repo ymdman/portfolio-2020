@@ -18,11 +18,11 @@ class DrawerMenu extends VuexModule {
 
   @Action
   toggle(): void {
-    this.drawerMenu();
+    this.update();
   }
 
   @Mutation
-  drawerMenu(): void {
+  update(): void {
     this._isOpened = !this._isOpened;
   }
 

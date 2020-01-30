@@ -19,11 +19,11 @@ class Works extends VuexModule {
 
   @Action
   fetchData(): void {
-    fetch('./api/works.json')
+    fetch('/api/works.json')
       .then(res => res.json())
       .then(res => {
-        this.addList(res.list);
-        this.addDescription(res.description);
+        this.updateList(res.list);
+        this.updateDescription(res.description);
       })
       .catch(err => {
         console.error(err);
@@ -31,12 +31,12 @@ class Works extends VuexModule {
   }
 
   @Mutation
-  addList(list: []): void {
+  updateList(list: []): void {
     this._list = list;
   }
 
   @Mutation
-  addDescription(description: string): void {
+  updateDescription(description: string): void {
     this._description = description;
   }
 

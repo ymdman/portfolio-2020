@@ -20,12 +20,12 @@ class Skill extends VuexModule {
 
   @Action
   fetchData(): void {
-    fetch('./api/skill.json')
+    fetch('/api/skill.json')
       .then(res => res.json())
       .then(res => {
-        this.addProgramming(res.programming);
-        this.addTool(res.tool);
-        this.addDescription(res.description);
+        this.updateProgramming(res.programming);
+        this.updateTool(res.tool);
+        this.updateDescription(res.description);
       })
       .catch(err => {
         console.error(err);
@@ -33,17 +33,17 @@ class Skill extends VuexModule {
   }
 
   @Mutation
-  addProgramming(programming: {}): void {
+  updateProgramming(programming: {}): void {
     this._programming = programming;
   }
 
   @Mutation
-  addTool(tool: {}): void {
+  updateTool(tool: {}): void {
     this._tool = tool;
   }
 
   @Mutation
-  addDescription(description: string): void {
+  updateDescription(description: string): void {
     this._description = description;
   }
 

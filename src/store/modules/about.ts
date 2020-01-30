@@ -38,12 +38,12 @@ class About extends VuexModule {
 
   @Action
   fetchData(): void {
-    fetch('./api/about.json')
+    fetch('/api/about.json')
       .then(res => res.json())
       .then(res => {
-        this.addPoint(res.pointList);
-        this.addProfile(res.profile);
-        this.addDescription(res.description);
+        this.updatePoint(res.pointList);
+        this.updateProfile(res.profile);
+        this.updateDescription(res.description);
       })
       .catch(err => {
         console.error(err);
@@ -51,17 +51,17 @@ class About extends VuexModule {
   }
 
   @Mutation
-  addPoint(pointList: []): void {
+  updatePoint(pointList: []): void {
     this._pointList = pointList;
   }
 
   @Mutation
-  addProfile(profile: Profile): void {
+  updateProfile(profile: Profile): void {
     this._profile = profile;
   }
 
   @Mutation
-  addDescription(description: string): void {
+  updateDescription(description: string): void {
     this._description = description;
   }
 

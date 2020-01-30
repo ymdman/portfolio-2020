@@ -20,11 +20,11 @@ class UserAgent extends VuexModule {
   @Action
   createUserAgent(): void {
     const userAgent = Bowser.getParser(window.navigator.userAgent).getBrowser();
-    this.addUserAgent(userAgent);
+    this.updateUserAgent(userAgent);
   }
 
   @Mutation
-  addUserAgent(userAgent: {}): void {
+  updateUserAgent(userAgent: {}): void {
     this.userAgent = userAgent;
   }
 
