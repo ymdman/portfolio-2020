@@ -8,6 +8,10 @@ import {
 import { Route } from 'vue-router';
 import store from '../index';
 
+interface Params {
+  id?: string;
+}
+
 @Module({
   dynamic: true,
   store,
@@ -73,11 +77,11 @@ class Location extends VuexModule {
     return this.route.path;
   }
 
-  get params(): object {
+  get params(): Params {
     return this.route.params;
   }
 
-  get query(): object {
+  get query(): {} {
     return this.route.query;
   }
 
