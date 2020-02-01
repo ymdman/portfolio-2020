@@ -15,6 +15,10 @@ export default class Work extends Vue {
     work.fetchData(this.paramsId);
   }
 
+  beforeUpdate(): void {
+    this.updateTitle();
+  }
+
   destroyed(): void {
     work.clearData();
   }
@@ -24,11 +28,15 @@ export default class Work extends Vue {
     work.fetchData(to.params.id);
   }
 
-  get work(): {} {
+  get work(): { title: string } {
     return work.detail;
   }
 
   get paramsId(): string | undefined {
     return location.params.id;
+  }
+
+  updateTitle(): void {
+    document.title = `${this.work.title} | Work | Kazuhiro Yamada Portfolio`;
   }
 }

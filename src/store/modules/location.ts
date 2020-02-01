@@ -39,34 +39,6 @@ class Location extends VuexModule {
     this.route.params = to.params;
     this.route.query = to.query;
     this.route.hash = to.hash;
-
-    const titleElm = document.querySelector('title');
-    const descriptionElm = document.querySelector('meta[name="description"]');
-    let title = '';
-    let description = '';
-    switch (to.name) {
-      case 'top':
-        description = 'toptoptoptoptoptoptoptoptoptoptoptoptoptoptoptoptop';
-        break;
-      case 'skill':
-        title = 'Skill | ';
-        description = 'skillskillskillskillskillskillskillskillskillskill';
-        break;
-      case 'works':
-        title = 'Works | ';
-        description = 'worksworksworksworksworksworksworksworksworksworks';
-        break;
-      default:
-        break;
-    }
-
-    if (titleElm !== null) {
-      titleElm.innerHTML = `${title}Kazuhiro Yamada Portfolio`;
-    }
-
-    if (descriptionElm !== null) {
-      descriptionElm.setAttribute('content', description);
-    }
   }
 
   get name(): string {

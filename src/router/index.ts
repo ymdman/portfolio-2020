@@ -14,13 +14,16 @@ type Position = {
   y: number;
 };
 
-export default new VueRouter({
-  mode: 'history',
+const router = new VueRouter({
+  // mode: 'history',
   routes: [
     {
       path: '/skill',
       name: 'skill',
       component: Skill,
+      meta: {
+        title: 'Skill | '
+      },
       beforeEnter: (to, from, next): void => {
         location.update(to);
         next();
@@ -30,6 +33,9 @@ export default new VueRouter({
       path: '/',
       name: 'top',
       component: Top,
+      meta: {
+        title: ''
+      },
       beforeEnter: (to, from, next): void => {
         location.update(to);
         next();
@@ -39,6 +45,9 @@ export default new VueRouter({
       path: '/works',
       name: 'works',
       component: Works,
+      meta: {
+        title: 'Works | '
+      },
       beforeEnter: (to, from, next): void => {
         location.update(to);
         next();
@@ -48,6 +57,9 @@ export default new VueRouter({
       path: '/works/:id',
       name: 'work',
       component: Work,
+      meta: {
+        title: 'Work | '
+      },
       beforeEnter: (to, from, next): void => {
         location.update(to);
         next();
@@ -71,3 +83,9 @@ export default new VueRouter({
     }
   }
 });
+
+router.afterEach(to => {
+  document.title = `${to.meta.title}Kazuhiro Yamada Portfolio`;
+});
+
+export default router;
