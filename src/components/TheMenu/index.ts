@@ -1,5 +1,5 @@
 import { Component, Vue } from 'vue-property-decorator';
-import drawerMenu from '../../store/modules/drawerMenu';
+import menu from '../../store/modules/menu';
 import VIconX from '../VIcons/x.vue';
 
 @Component({
@@ -8,19 +8,19 @@ import VIconX from '../VIcons/x.vue';
   }
 })
 export default class TheDrawerMenu extends Vue {
-  get isDrawerMenuOpened(): boolean {
-    return drawerMenu.isOpened;
+  get isMenuOpened(): boolean {
+    return menu.isOpened;
   }
 
   handleIconXClick(): void {
-    drawerMenu.toggle();
+    menu.toggle();
   }
 
   handleOverlayClick(): void {
-    drawerMenu.toggle();
+    menu.toggle();
   }
 
   handleRouterLinkClick(): void {
-    drawerMenu.toggle();
+    menu.toggle();
   }
 }

@@ -11,7 +11,7 @@ import store from '../index';
   dynamic: true,
   store,
   namespaced: true,
-  name: 'drawerMenu'
+  name: 'menu'
 })
 class DrawerMenu extends VuexModule {
   _isOpened = false;

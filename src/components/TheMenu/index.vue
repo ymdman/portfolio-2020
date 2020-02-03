@@ -1,18 +1,13 @@
 <template>
-  <div class="drawer-menu">
+  <div class="menu">
     <transition name="overlay">
-      <div
-        v-show="isDrawerMenuOpened"
-        class="overlay"
-        @click="handleOverlayClick"
-      />
+      <div v-show="isMenuOpened" class="overlay" @click="handleOverlayClick" />
     </transition>
     <transition name="nav">
-      <nav v-show="isDrawerMenuOpened" class="nav">
+      <nav v-show="isMenuOpened" class="nav">
         <div class="icon-x" @click="handleIconXClick">
           <v-icon-x />
         </div>
-        <h2 class="title">Menu</h2>
         <ul class="items">
           <li class="item">
             <router-link

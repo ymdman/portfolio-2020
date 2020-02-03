@@ -1,9 +1,9 @@
-.drawer-menu {
+.menu {
 }
 
 .nav {
-  width: 250px;
-  height: 100%;
+  width: 100%;
+  height: 400px;
   background-color: var(--color-theme);
   position: fixed;
   top: 0;
@@ -12,12 +12,12 @@
 
   &-enter-active,
   &-leave-active {
-    transition: right 400ms;
+    transition: top 400ms;
   }
 
   &-enter,
   &-leave-to {
-    right: -230px;
+    top: -400px;
   }
 }
 
@@ -25,32 +25,31 @@
   width: 30px;
   color: #fff;
   margin-top: 20px;
-  margin-right: 20px;
+  margin-right: 15%;
   margin-left: auto;
   cursor: pointer;
 }
 
-.title {
-  color: #fff;
-  margin-top: 20px;
-  margin-left: 20px;
-}
-
 .items {
   color: #fff;
-  margin-top: 20px;
-  border-top: solid 1px #fff;
+  margin-top: 30px;
 }
 
 .item {
-  border-bottom: solid 1px #fff;
+  text-align: center;
+}
+
+.item + .item {
+  margin-top: 25px;
 }
 
 .anchor {
   color: #fff;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 4.6rem;
+  font-weight: bold;
   text-decoration: none;
   display: block;
-  padding: 15px 20px;
 }
 
 .overlay {
@@ -74,5 +73,11 @@
   &-enter-to,
   &-leave {
     opacity: 0.6;
+  }
+}
+
+@media (--mq-mobile) {
+  .icon-x {
+    margin-right: 20px;
   }
 }

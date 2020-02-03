@@ -7,7 +7,7 @@
       </main>
       <the-footer />
     </div>
-    <the-drawer-menu />
+    <the-menu />
   </div>
 </template>
 

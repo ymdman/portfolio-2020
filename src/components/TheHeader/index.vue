@@ -1,8 +1,8 @@
 <template>
   <header class="header">
-    <h1 class="logo">Site Name</h1>
+    <h1 class="logo">19790620.com</h1>
     <div class="icon-three-bars" @click="handleIconThreeBarsClick">
-      <v-icon-three-bars v-if="!isDrawerMenuOpened" />
+      <v-icon-three-bars />
     </div>
   </header>
 </template>

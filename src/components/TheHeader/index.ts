@@ -1,5 +1,5 @@
 import { Component, Vue } from 'vue-property-decorator';
-import drawerMenu from '../../store/modules/drawerMenu';
+import menu from '../../store/modules/menu';
 import VIconThreeBars from '../../components/VIcons/threeBars.vue';
 
 @Component({
@@ -8,11 +8,7 @@ import VIconThreeBars from '../../components/VIcons/threeBars.vue';
   }
 })
 export default class TheHeader extends Vue {
-  get isDrawerMenuOpened(): boolean {
-    return drawerMenu.isOpened;
-  }
-
   handleIconThreeBarsClick(): void {
-    drawerMenu.toggle();
+    menu.toggle();
   }
 }

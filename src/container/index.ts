@@ -3,13 +3,13 @@ import layout from '../store/modules/layout';
 import location from '../store/modules/location';
 import userAgent from '../store/modules/userAgent';
 import { throttle } from '../utils/';
-import TheDrawerMenu from '../components/TheDrawerMenu/index.vue';
+import TheMenu from '../components/TheMenu/index.vue';
 import TheFooter from '../components/TheFooter/index.vue';
 import TheHeader from '../components/TheHeader/index.vue';
 
 @Component({
   components: {
-    TheDrawerMenu,
+    TheMenu,
     TheFooter,
     TheHeader
   }

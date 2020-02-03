@@ -13,6 +13,10 @@
   width: 100%;
 }
 
+.logo {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
 .icon-three-bars {
   width: 30px;
   color: var(--bdc-primary);
