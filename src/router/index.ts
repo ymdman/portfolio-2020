@@ -69,6 +69,9 @@ const router = new VueRouter({
       path: '*',
       name: 'notfound',
       component: NotFound,
+      meta: {
+        title: 'Not Found | '
+      },
       beforeEnter: (to, from, next): void => {
         location.update(to);
         next();
