@@ -1,0 +1,9 @@
+.u-anchor {
+  color: var(--color-theme);
+}
+
+@media (hover: hover) {
+  .u-anchor:hover {
+    opacity: 0.7;
+  }
+}
