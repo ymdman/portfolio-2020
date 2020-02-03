@@ -18,7 +18,7 @@
               <dd class="work__summary-text">{{ work.charge }}</dd>
               <dt class="work__summary-title">Experience / 期間</dt>
               <dd class="work__summary-text">{{ work.experience }}</dd>
-              <dt class="work__summary-title">その他</dt>
+              <dt class="work__summary-title">Library etc. / ライブラリ等</dt>
               <dd class="work__summary-text">{{ work.other }}</dd>
             </dl>
             <ul class="work__images">
