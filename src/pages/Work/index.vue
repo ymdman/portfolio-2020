@@ -21,8 +21,20 @@
               <dt class="work__summary-title">Library etc. / ライブラリ等</dt>
               <dd class="work__summary-text">{{ work.other }}</dd>
             </dl>
+            <p v-if="!!work.site.url" class="work__button">
+              <a
+                :href="work.site.url"
+                target="_blank"
+                class="work__button-anchor"
+              >
+                Visit This Site
+              </a>
+            </p>
             <ul class="work__images">
-              <li class="work__image-item work__image-item--large">
+              <li
+                v-if="!!work.site.img[0]"
+                class="work__image-item work__image-item--large"
+              >
                 <v-lazy-load-img
                   :src="work.site.img[0].src"
                   :alt="work.site.img[0].alt"
@@ -30,7 +42,10 @@
                   :height="1000"
                 />
               </li>
-              <li class="work__image-item work__image-item--small">
+              <li
+                v-if="!!work.site.img[1]"
+                class="work__image-item work__image-item--small"
+              >
                 <v-lazy-load-img
                   :src="work.site.img[1].src"
                   :alt="work.site.img[1].alt"
