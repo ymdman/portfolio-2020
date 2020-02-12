@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="header" :class="{ 'header--white': isHeroVisible }">
     <h1 class="logo">19790620.com</h1>
     <div class="icon-three-bars" @click="handleIconThreeBarsClick">
       <v-icon-three-bars />

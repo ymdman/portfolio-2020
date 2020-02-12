@@ -11,6 +11,10 @@
   left: 0;
   z-index: var(--z-index-header);
   width: 100%;
+
+  &--white {
+    color: #fff;
+  }
 }
 
 .logo {
@@ -19,7 +23,6 @@
 
 .icon-three-bars {
   width: 30px;
-  color: var(--bdc-primary);
   cursor: pointer;
 }
 
