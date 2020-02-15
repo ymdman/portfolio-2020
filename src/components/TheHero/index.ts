@@ -41,7 +41,7 @@ export default class TheHero extends Vue {
         const entry = entries[0];
         hero.visible(entry.isIntersecting);
       },
-      { threshold: [0.05] }
+      { rootMargin: '-35px 0px 0px' }
     );
     this.io.observe(this.$el);
   }
