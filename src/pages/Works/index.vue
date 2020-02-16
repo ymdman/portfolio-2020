@@ -37,11 +37,13 @@
                   <figure class="works__project-detail">
                     <div class="works__project-image">
                       <v-lazy-load-img
+                        v-if="!!project.image"
                         :src="project.image.src"
                         :alt="project.image.alt"
                         :width="600"
                         :height="400"
                       />
+                      <div v-else class="works__project-no-image">No Image</div>
                     </div>
                     <figcaption class="works__project-caption">
                       {{ project.siteName }}

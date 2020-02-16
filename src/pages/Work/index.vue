@@ -1,8 +1,8 @@
 <template>
   <div>
     <the-hero
-      :src="work.site.img[0].src"
-      :alt="work.site.img[0].alt"
+      :src="!!work.site.img ? work.site.img[0].src : ''"
+      :alt="!!work.site.img ? work.site.img[0].alt : ''"
       :title="work.title"
     />
     <div class="l-content">
@@ -30,7 +30,7 @@
                 Visit This Site
               </a>
             </p>
-            <ul class="work__images">
+            <ul v-if="!!work.site.img" class="work__images">
               <li
                 v-if="!!work.site.img[0]"
                 class="work__image-item work__image-item--large"

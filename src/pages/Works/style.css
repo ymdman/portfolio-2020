@@ -41,6 +41,20 @@
     border: solid 1px var(--bdc-tertiary);
   }
 
+  &__project-no-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3d3d3d;
+    color: #fff;
+
+    &::before {
+      content: "";
+      display: block;
+      padding-top: 75%;
+    }
+  }
+
   &__project-caption {
     font-family: "Yanone Kaffeesatz", sans-serif;
     margin-top: 3px;
