@@ -42,7 +42,7 @@
 
   &__item {
     display: inline-block;
-    background-color: tomato;
+    background-color: var(--color-theme);
     color: #fff;
     border-radius: 15px;
     margin-top: 10px;

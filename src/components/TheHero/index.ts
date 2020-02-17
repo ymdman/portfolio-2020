@@ -14,6 +14,12 @@ export default class TheHero extends Vue {
   @Prop({ type: String, required: true })
   title!: string;
 
+  @Prop({ type: String })
+  read!: string;
+
+  @Prop({ type: String })
+  type!: string;
+
   get updatedSrc(): string {
     return this.src;
   }
@@ -24,6 +30,10 @@ export default class TheHero extends Vue {
 
   get updatedTitle(): string {
     return this.title;
+  }
+
+  get updatedRead(): string {
+    return this.read;
   }
 
   mounted(): void {

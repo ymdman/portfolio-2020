@@ -4,6 +4,7 @@
       :src="'/images/top/img-main-visual.jpg'"
       :alt="'aaa'"
       :title="'KAZUHIRO YAMADA'"
+      :read="'Front-End Engineer'"
     />
     <div class="l-content">
       <section class="l-content__section">

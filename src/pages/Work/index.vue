@@ -4,6 +4,7 @@
       :src="!!work.site.img ? work.site.img[0].src : ''"
       :alt="!!work.site.img ? work.site.img[0].alt : ''"
       :title="work.title"
+      type="blurry"
     />
     <div class="l-content">
       <div class="l-content__section">

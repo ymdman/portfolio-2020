@@ -1,8 +1,16 @@
 <template>
   <div class="hero">
-    <img :src="updatedSrc" :alt="updatedAlt" class="image" />
-    <div class="overlay" />
-    <h1 class="title">{{ updatedTitle }}</h1>
+    <div class="content">
+      <h1 class="title">{{ updatedTitle }}</h1>
+      <p v-if="!!updatedRead" class="read">{{ updatedRead }}</p>
+    </div>
+    <img
+      :src="updatedSrc"
+      :alt="updatedAlt"
+      :class="!!type && `image--${type}`"
+      class="image"
+    />
+    <div v-if="!!type" class="overlay" />
   </div>
 </template>
 
