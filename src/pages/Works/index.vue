@@ -15,11 +15,11 @@
       <div class="l-content__body">
         <div class="works">
           <dl class="works__summary-list">
-            <dt class="works__summary-title">Job / 職種</dt>
+            <dt class="works__summary-title">職種</dt>
             <dd class="works__summary-text">{{ item.job }}</dd>
-            <dt class="works__summary-title">Status / 雇用形態</dt>
+            <dt class="works__summary-title">雇用形態</dt>
             <dd class="works__summary-text">{{ item.status }}</dd>
-            <dt class="works__summary-title">Period / 期間</dt>
+            <dt class="works__summary-title">期間</dt>
             <dd class="works__summary-text">{{ item.period }}</dd>
           </dl>
           <p class="works__description">{{ item.description }}</p>
