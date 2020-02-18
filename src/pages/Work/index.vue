@@ -13,13 +13,13 @@
           <div class="work">
             <p>{{ work.description }}</p>
             <dl class="work__summary-list">
-              <dt class="work__summary-title">Site / サイト</dt>
+              <dt class="work__summary-title">サイト</dt>
               <dd class="work__summary-text">{{ work.site.name }}</dd>
-              <dt class="work__summary-title">Charge / 担当</dt>
+              <dt class="work__summary-title">担当</dt>
               <dd class="work__summary-text">{{ work.charge }}</dd>
-              <dt class="work__summary-title">Experience / 期間</dt>
+              <dt class="work__summary-title">期間</dt>
               <dd class="work__summary-text">{{ work.experience }}</dd>
-              <dt class="work__summary-title">Library etc. / ライブラリ等</dt>
+              <dt class="work__summary-title">その他</dt>
               <dd class="work__summary-text">{{ work.other }}</dd>
             </dl>
             <p v-if="!!work.site.url" class="work__button">
