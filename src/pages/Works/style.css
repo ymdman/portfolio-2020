@@ -37,8 +37,13 @@
     cursor: pointer;
   }
 
-  &__project-image {
+  &__project-thumbnail {
+    overflow: hidden;
     border: solid 1px var(--bdc-tertiary);
+  }
+
+  &__project-image {
+    transition: transform 400ms;
   }
 
   &__project-no-image {
@@ -47,6 +52,7 @@
     justify-content: center;
     background-color: #3d3d3d;
     color: #fff;
+    transition: transform 400ms;
 
     &::before {
       content: "";
@@ -60,8 +66,13 @@
     margin-top: 3px;
   }
 
-  &__project-detail:hover &__project-image {
+  &__project-detail:hover &__project-thumbnail {
     border-color: var(--color-theme);
+  }
+
+  &__project-detail:hover &__project-image,
+  &__project-detail:hover &__project-no-image {
+    transform: scale(1.05);
   }
 
   &__project-detail:hover &__project-caption {

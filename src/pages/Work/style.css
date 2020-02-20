@@ -21,6 +21,10 @@
     color: #fff;
     text-decoration: none;
     padding: 5px 10px;
+
+    &:hover {
+      opacity: 0.6;
+    }
   }
 
   &__images {

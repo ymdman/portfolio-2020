@@ -1,8 +1,8 @@
 <template>
   <div>
     <the-hero
-      :src="!!work.site.img ? work.site.img[0].src : ''"
-      :alt="!!work.site.img ? work.site.img[0].alt : ''"
+      :src="!!work.detail.img ? work.detail.img[0].src : ''"
+      :alt="!!work.detail.img ? work.detail.img[0].alt : ''"
       :title="work.title"
       type="blurry"
     />
@@ -13,8 +13,19 @@
           <div class="work">
             <p>{{ work.description }}</p>
             <dl class="work__summary-list">
-              <dt class="work__summary-title">サイト</dt>
-              <dd class="work__summary-text">{{ work.site.name }}</dd>
+              <dt
+                v-if="work.detail.category === 'web'"
+                class="work__summary-title"
+              >
+                サイト名
+              </dt>
+              <dt
+                v-if="work.detail.category === 'flyer'"
+                class="work__summary-title"
+              >
+                広告名
+              </dt>
+              <dd class="work__summary-text">{{ work.detail.name }}</dd>
               <dt class="work__summary-title">担当</dt>
               <dd class="work__summary-text">{{ work.charge }}</dd>
               <dt class="work__summary-title">期間</dt>
@@ -22,34 +33,34 @@
               <dt class="work__summary-title">その他</dt>
               <dd class="work__summary-text">{{ work.other }}</dd>
             </dl>
-            <p v-if="!!work.site.url" class="work__button">
+            <p v-if="!!work.detail.url" class="work__button">
               <a
-                :href="work.site.url"
+                :href="work.detail.url"
                 target="_blank"
                 class="work__button-anchor"
               >
                 Visit This Site
               </a>
             </p>
-            <ul v-if="!!work.site.img" class="work__images">
+            <ul v-if="!!work.detail.img" class="work__images">
               <li
-                v-if="!!work.site.img[0]"
+                v-if="!!work.detail.img[0]"
                 class="work__image-item work__image-item--large"
               >
                 <v-lazy-load-img
-                  :src="work.site.img[0].src"
-                  :alt="work.site.img[0].alt"
+                  :src="work.detail.img[0].src"
+                  :alt="work.detail.img[0].alt"
                   :width="1000"
                   :height="1000"
                 />
               </li>
               <li
-                v-if="!!work.site.img[1]"
+                v-if="!!work.detail.img[1]"
                 class="work__image-item work__image-item--small"
               >
                 <v-lazy-load-img
-                  :src="work.site.img[1].src"
-                  :alt="work.site.img[1].alt"
+                  :src="work.detail.img[1].src"
+                  :alt="work.detail.img[1].alt"
                   :width="320"
                   :height="320"
                 />
