@@ -38,6 +38,10 @@
 
   &__anchor {
     display: block;
+
+    &:hover {
+      opacity: 0.6;
+    }
   }
 
   &__github {
@@ -64,6 +68,11 @@
     &__body {
       margin-top: 20px;
       margin-left: 0;
+    }
+
+    &__image {
+      margin-right: auto;
+      margin-left: auto;
     }
   }
 }
