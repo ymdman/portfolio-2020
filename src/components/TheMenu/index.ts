@@ -7,7 +7,7 @@ import VIconX from '../VIcons/x.vue';
     VIconX
   }
 })
-export default class TheDrawerMenu extends Vue {
+export default class TheMenu extends Vue {
   get isMenuOpened(): boolean {
     return menu.isOpened;
   }

@@ -1,14 +1,11 @@
 <template>
   <div class="menu">
-    <transition name="overlay">
-      <div v-show="isMenuOpened" class="overlay" @click="handleOverlayClick" />
-    </transition>
     <transition name="nav">
       <nav v-show="isMenuOpened" class="nav">
         <div class="icon-x" @click="handleIconXClick">
           <v-icon-x />
         </div>
-        <ul class="items">
+        <ul class="list">
           <li class="item">
             <router-link
               to="/"
@@ -38,6 +35,9 @@
           </li>
         </ul>
       </nav>
+    </transition>
+    <transition name="overlay">
+      <div v-show="isMenuOpened" class="overlay" @click="handleOverlayClick" />
     </transition>
   </div>
 </template>
