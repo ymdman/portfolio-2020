@@ -16,10 +16,10 @@
               :key="item.key"
               class="programming__type-item"
             >
-              <div>{{ item.language }}</div>
-              <v-progress-bar
+              <p>{{ item.language }}</p>
+              <v-bar-graph
                 :glow-width="item.score"
-                class="programming__progress-bar"
+                class="programming__bar-graph"
               />
             </li>
           </ul>
@@ -42,7 +42,7 @@
         <div class="tool">
           <ul class="tool__list">
             <li v-for="item in tool.list" :key="item" class="tool__item">
-              {{ item }}
+              <V-tag :label="item" />
             </li>
           </ul>
           <p class="tool__text">{{ tool.description }}</p>

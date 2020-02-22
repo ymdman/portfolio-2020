@@ -1,17 +1,15 @@
 import { Component, Vue } from 'vue-property-decorator';
 import skill from '../../store/modules/skill';
-import VProgressBar from '../../components/VProgressBar/index.vue';
+import VBarGraph from '../../components/VBarGraph/index.vue';
+import VTag from '../../components/VTag/index.vue';
 
 @Component({
   components: {
-    VProgressBar
+    VBarGraph,
+    VTag
   }
 })
 export default class Skill extends Vue {
-  created(): void {
-    skill.fetchData();
-  }
-
   get description(): string {
     return skill.description;
   }
@@ -22,5 +20,9 @@ export default class Skill extends Vue {
 
   get tool(): {} {
     return skill.tool;
+  }
+
+  created(): void {
+    skill.fetchData();
   }
 }

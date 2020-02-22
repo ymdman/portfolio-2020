@@ -1,6 +1,6 @@
 <template>
-  <div class="progress-bar">
-    <div class="progress-bar-inner" :style="style" />
+  <div class="bar-graph">
+    <div class="bar" :style="{ width }" />
   </div>
 </template>
 
