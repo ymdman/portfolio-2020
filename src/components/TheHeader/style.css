@@ -2,15 +2,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: var(--layout-header-desktop-height);
+  width: 100%;
+  height: var(--layout-header-height);
   padding-right: 15%;
   padding-left: 15%;
   position: fixed;
   top: 0;
-  right: 0;
   left: 0;
   z-index: var(--z-index-header);
-  width: 100%;
 
   &--white {
     color: #fff;
@@ -19,10 +18,17 @@
 
 .logo {
   font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: var(--fs-xxx-large);
+  font-weight: bold;
+}
+
+.anchor {
+  color: inherit;
+  text-decoration: none;
 }
 
 .icon-three-bars {
-  width: 30px;
+  width: 26px;
   cursor: pointer;
 }
 
