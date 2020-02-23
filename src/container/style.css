@@ -7,7 +7,7 @@
 }
 
 .main {
-  padding-top: var(--layout-header-desktop-height);
+  padding-top: var(--layout-header-height);
 }
 
 @media (--mq-mobile) {
