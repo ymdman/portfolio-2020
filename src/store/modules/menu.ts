@@ -13,8 +13,12 @@ import store from '../index';
   namespaced: true,
   name: 'menu'
 })
-class DrawerMenu extends VuexModule {
+class Menu extends VuexModule {
   _isOpened = false;
+
+  get isOpened(): boolean {
+    return this._isOpened;
+  }
 
   @Action
   toggle(): void {
@@ -25,10 +29,6 @@ class DrawerMenu extends VuexModule {
   update(): void {
     this._isOpened = !this._isOpened;
   }
-
-  get isOpened(): boolean {
-    return this._isOpened;
-  }
 }
 
-export default getModule(DrawerMenu);
+export default getModule(Menu);

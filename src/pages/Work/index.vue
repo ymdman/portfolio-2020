@@ -33,15 +33,14 @@
               <dt class="work__summary-title">その他</dt>
               <dd class="work__summary-text">{{ work.other }}</dd>
             </dl>
-            <p v-if="!!work.detail.url" class="work__button">
-              <a
-                :href="work.detail.url"
-                target="_blank"
-                class="work__button-anchor"
-              >
-                Visit This Site
-              </a>
-            </p>
+            <a
+              v-if="!!work.detail.url"
+              :href="work.detail.url"
+              target="_blank"
+              class="work__button-anchor"
+            >
+              <v-button label="Visit This Site" />
+            </a>
             <ul v-if="!!work.detail.img" class="work__images">
               <li
                 v-if="!!work.detail.img[0]"

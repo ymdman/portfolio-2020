@@ -17,17 +17,6 @@ import Bowser from 'bowser';
 class UserAgent extends VuexModule {
   userAgent: Bowser.Parser.Details = {};
 
-  @Action
-  createUserAgent(): void {
-    const userAgent = Bowser.getParser(window.navigator.userAgent).getBrowser();
-    this.updateUserAgent(userAgent);
-  }
-
-  @Mutation
-  updateUserAgent(userAgent: {}): void {
-    this.userAgent = userAgent;
-  }
-
   get isChrome(): boolean {
     return this.userAgent.name === 'Chrome';
   }
@@ -38,6 +27,17 @@ class UserAgent extends VuexModule {
 
   get isFirefox(): boolean {
     return this.userAgent.name === 'Firefox';
+  }
+
+  @Action
+  createUserAgent(): void {
+    const userAgent = Bowser.getParser(window.navigator.userAgent).getBrowser();
+    this.updateUserAgent(userAgent);
+  }
+
+  @Mutation
+  updateUserAgent(userAgent: {}): void {
+    this.userAgent = userAgent;
   }
 }
 

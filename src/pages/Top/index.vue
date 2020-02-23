@@ -1,21 +1,21 @@
 <template>
   <div>
     <the-hero
-      :src="'/images/top/img-main-visual.jpg'"
-      :alt="'aaa'"
-      :title="'KAZUHIRO YAMADA'"
-      :read="'Front-End Engineer'"
+      src="/images/top/img-main-visual.jpg"
+      alt="みなとみらいの写真"
+      title="KAZUHIRO YAMADA"
+      read="Front-End Engineer"
     />
     <div class="l-content">
       <section class="l-content__section">
-        <h1 class="c-title c-title--level-1">About</h1>
+        <h2 class="c-title c-title--level-1">About</h2>
         <div class="l-content__body">
           <!-- eslint-disable vue/no-v-html -->
           <p v-html="description" />
         </div>
       </section>
       <section class="l-content__section">
-        <h2 class="c-title c-title--level-2">Point</h2>
+        <h3 class="c-title c-title--level-2">Point</h3>
         <div class="l-content__body">
           <div class="point">
             <ul class="point__list">
@@ -25,7 +25,7 @@
         </div>
       </section>
       <section class="l-content__section l-content__section--lined">
-        <h2 class="c-title c-title--level-2">Profile</h2>
+        <h3 class="c-title c-title--level-2">Profile</h3>
         <div class="l-content__body">
           <div class="profile">
             <div class="profile__image">

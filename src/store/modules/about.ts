@@ -36,6 +36,18 @@ class About extends VuexModule {
   };
   _description = '';
 
+  get pointList(): string[] {
+    return this._pointList;
+  }
+
+  get profile(): {} {
+    return this._profile;
+  }
+
+  get description(): string {
+    return this._description;
+  }
+
   @Action
   fetchData(): void {
     fetch('/api/about.json')
@@ -63,18 +75,6 @@ class About extends VuexModule {
   @Mutation
   updateDescription(description: string): void {
     this._description = description;
-  }
-
-  get pointList(): string[] {
-    return this._pointList;
-  }
-
-  get profile(): {} {
-    return this._profile;
-  }
-
-  get description(): string {
-    return this._description;
   }
 }
 

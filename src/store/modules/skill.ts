@@ -18,6 +18,18 @@ class Skill extends VuexModule {
   _tool = {};
   _description = '';
 
+  get programming(): {} {
+    return this._programming;
+  }
+
+  get tool(): {} {
+    return this._tool;
+  }
+
+  get description(): string {
+    return this._description;
+  }
+
   @Action
   fetchData(): void {
     fetch('/api/skill.json')
@@ -45,18 +57,6 @@ class Skill extends VuexModule {
   @Mutation
   updateDescription(description: string): void {
     this._description = description;
-  }
-
-  get programming(): {} {
-    return this._programming;
-  }
-
-  get tool(): {} {
-    return this._tool;
-  }
-
-  get description(): string {
-    return this._description;
   }
 }
 

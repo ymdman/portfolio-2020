@@ -17,6 +17,14 @@ class Works extends VuexModule {
   _list = [];
   _description = '';
 
+  get list(): string[] | number[] {
+    return this._list;
+  }
+
+  get description(): string {
+    return this._description;
+  }
+
   @Action
   fetchData(): void {
     fetch('/api/works.json')
@@ -38,14 +46,6 @@ class Works extends VuexModule {
   @Mutation
   updateDescription(description: string): void {
     this._description = description;
-  }
-
-  get list(): string[] | number[] {
-    return this._list;
-  }
-
-  get description(): string {
-    return this._description;
   }
 }
 

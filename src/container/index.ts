@@ -3,18 +3,26 @@ import layout from '../store/modules/layout';
 import location from '../store/modules/location';
 import userAgent from '../store/modules/userAgent';
 import { throttle } from '../utils/';
-import TheMenu from '../components/TheMenu/index.vue';
 import TheFooter from '../components/TheFooter/index.vue';
 import TheHeader from '../components/TheHeader/index.vue';
+import TheMenu from '../components/TheMenu/index.vue';
 
 @Component({
   components: {
-    TheMenu,
     TheFooter,
-    TheHeader
+    TheHeader,
+    TheMenu,
   }
 })
 export default class Container extends Vue {
+  get isTopPage(): boolean {
+    return location.isTopPage;
+  }
+
+  get isWorkPage(): boolean {
+    return location.isWorkPage;
+  }
+
   created(): void {
     userAgent.createUserAgent();
   }
@@ -31,14 +39,6 @@ export default class Container extends Vue {
       'resize',
       throttle(this.handleWindowResize, 1000) as EventListener
     );
-  }
-
-  get isTopPage(): boolean {
-    return location.isTopPage;
-  }
-
-  get isWorkPage(): boolean {
-    return location.isWorkPage;
   }
 
   handleWindowResize(): void {

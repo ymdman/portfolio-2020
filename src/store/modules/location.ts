@@ -27,20 +27,6 @@ class Location extends VuexModule {
     hash: ''
   };
 
-  @Action
-  update(to: Route): void {
-    this.all(to);
-  }
-
-  @Mutation
-  all(to: Route): void {
-    this.route.name = to.name as string;
-    this.route.path = to.path;
-    this.route.params = to.params;
-    this.route.query = to.query;
-    this.route.hash = to.hash;
-  }
-
   get name(): string {
     return this.route.name;
   }
@@ -75,6 +61,20 @@ class Location extends VuexModule {
   get isWorkPage(): boolean {
     const name = this.route.name;
     return name === 'work';
+  }
+
+  @Action
+  update(to: Route): void {
+    this.all(to);
+  }
+
+  @Mutation
+  all(to: Route): void {
+    this.route.name = to.name as string;
+    this.route.path = to.path;
+    this.route.params = to.params;
+    this.route.query = to.query;
+    this.route.hash = to.hash;
   }
 }
 

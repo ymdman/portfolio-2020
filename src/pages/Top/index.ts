@@ -8,16 +8,12 @@ import VIconQiita from '../../components/VIcons/qiita.vue';
 @Component({
   components: {
     TheHero,
-    VLazyLoadImg,
     VIconGitHub,
-    VIconQiita
+    VIconQiita,
+    VLazyLoadImg
   }
 })
 export default class Top extends Vue {
-  created(): void {
-    about.fetchData();
-  }
-
   get description(): string {
     return about.description;
   }
@@ -28,5 +24,9 @@ export default class Top extends Vue {
 
   get profile(): {} {
     return about.profile;
+  }
+
+  created(): void {
+    about.fetchData();
   }
 }

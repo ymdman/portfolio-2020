@@ -11,16 +11,9 @@
     margin-top: 15px;
   }
 
-  &__button {
-    margin-top: 30px;
-  }
-
   &__button-anchor {
+    margin-top: 30px;
     display: inline-block;
-    background-color: var(--color-theme);
-    color: #fff;
-    text-decoration: none;
-    padding: 5px 10px;
 
     &:hover {
       opacity: 0.6;

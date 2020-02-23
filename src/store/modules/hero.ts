@@ -16,6 +16,10 @@ import store from '../index';
 class Hero extends VuexModule {
   _isVisible = false;
 
+  get isVisible(): boolean {
+    return this._isVisible;
+  }
+
   @Action
   visible(value: boolean): void {
     this.update(value);
@@ -24,10 +28,6 @@ class Hero extends VuexModule {
   @Mutation
   update(value: boolean): void {
     this._isVisible = value;
-  }
-
-  get isVisible(): boolean {
-    return this._isVisible;
   }
 }
 

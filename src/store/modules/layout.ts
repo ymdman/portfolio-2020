@@ -18,6 +18,22 @@ class Layout extends VuexModule {
   width = window.innerWidth;
   height = window.innerHeight;
 
+  get isDesktop(): boolean {
+    return this.type === 'desktop';
+  }
+
+  get isMobile(): boolean {
+    return this.type === 'mobile';
+  }
+
+  get windowWidth(): number {
+    return this.width;
+  }
+
+  get windowHeight(): number {
+    return this.height;
+  }
+
   @Action
   updateSize(width: number, height: number): void {
     this.updateLayout(width, height);
@@ -33,22 +49,6 @@ class Layout extends VuexModule {
     } else {
       this.type = 'mobile';
     }
-  }
-
-  get isDesktop(): boolean {
-    return this.type === 'desktop';
-  }
-
-  get isMobile(): boolean {
-    return this.type === 'mobile';
-  }
-
-  get windowWidth(): number {
-    return this.width;
-  }
-
-  get windowHeight(): number {
-    return this.height;
   }
 }
 

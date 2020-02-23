@@ -8,15 +8,15 @@ import VLazyLoadImg from '../../components/VLazyLoadImg/index.vue';
   }
 })
 export default class Works extends Vue {
-  created(): void {
-    works.fetchData();
-  }
-
   get list(): string[] | number[] {
     return works.list;
   }
 
   get description(): string {
     return works.description;
+  }
+
+  created(): void {
+    works.fetchData();
   }
 }
