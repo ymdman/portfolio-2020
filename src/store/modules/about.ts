@@ -7,6 +7,13 @@ import {
 } from 'vuex-module-decorators';
 import store from '../index';
 
+interface Hero {
+  src: string;
+  alt: string;
+  title: string;
+  read: string;
+}
+
 interface Profile {
   image: {
     src: string;
@@ -24,6 +31,12 @@ interface Profile {
   name: 'about'
 })
 class About extends VuexModule {
+  _hero = {
+    src: '',
+    alt: '',
+    title: '',
+    read: ''
+  };
   _pointList = [];
   _profile: Profile = {
     image: {
@@ -35,6 +48,10 @@ class About extends VuexModule {
     description: ''
   };
   _description = '';
+
+  get hero(): {} {
+    return this._hero;
+  }
 
   get pointList(): string[] {
     return this._pointList;
@@ -53,6 +70,7 @@ class About extends VuexModule {
     fetch('/api/about.json')
       .then(res => res.json())
       .then(res => {
+        this.updateHero(res.hero);
         this.updatePoint(res.pointList);
         this.updateProfile(res.profile);
         this.updateDescription(res.description);
@@ -60,6 +78,11 @@ class About extends VuexModule {
       .catch(err => {
         console.error(err);
       });
+  }
+
+  @Mutation
+  updateHero(hero: Hero): void {
+    this._hero = hero;
   }
 
   @Mutation

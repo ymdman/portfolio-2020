@@ -1,7 +1,12 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import hero from '../../store/modules/hero';
+import VLazyLoadImg from '../../components/VLazyLoadImg/index.vue';
 
-@Component
+@Component({
+  components: {
+    VLazyLoadImg
+  }
+})
 export default class TheHero extends Vue {
   io = {} as IntersectionObserver;
 
@@ -11,6 +16,12 @@ export default class TheHero extends Vue {
   @Prop({ type: String, required: true })
   alt!: string;
 
+  @Prop({ type: Number })
+  width!: number;
+
+  @Prop({ type: Number })
+  height!: number;
+
   @Prop({ type: String, required: true })
   title!: string;
 
@@ -19,22 +30,6 @@ export default class TheHero extends Vue {
 
   @Prop({ type: String })
   type!: string;
-
-  get updatedSrc(): string {
-    return this.src;
-  }
-
-  get updatedAlt(): string {
-    return this.alt;
-  }
-
-  get updatedTitle(): string {
-    return this.title;
-  }
-
-  get updatedRead(): string {
-    return this.read;
-  }
 
   mounted(): void {
     this.observe();

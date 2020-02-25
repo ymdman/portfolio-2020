@@ -1,10 +1,12 @@
 <template>
   <div>
     <the-hero
-      src="/images/top/img-main-visual.jpg"
-      alt="みなとみらいの写真"
-      title="KAZUHIRO YAMADA"
-      read="Front-End Engineer"
+      :src="hero.src"
+      :alt="hero.alt"
+      :width="1200"
+      :height="1200"
+      :title="hero.title"
+      :read="hero.read"
     />
     <div class="l-content">
       <section class="l-content__section">

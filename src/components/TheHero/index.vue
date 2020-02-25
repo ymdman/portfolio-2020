@@ -1,16 +1,17 @@
 <template>
   <div class="hero">
     <div class="content">
-      <h1 class="title">{{ updatedTitle }}</h1>
-      <p v-if="!!updatedRead" class="read">{{ updatedRead }}</p>
+      <h1 class="title">{{ title }}</h1>
+      <p v-if="!!read" class="read">{{ read }}</p>
     </div>
-    <img
-      :src="updatedSrc"
-      :alt="updatedAlt"
-      :class="!!type && `image--${type}`"
+    <v-lazy-load-img
+      :src="src"
+      :alt="alt"
+      :width="width"
+      :height="height"
       class="image"
     />
-    <div v-if="!!type" class="overlay" />
+    <div :class="{ overlay: type === 'dark' }" />
   </div>
 </template>
 

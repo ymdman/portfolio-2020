@@ -3,8 +3,10 @@
     <the-hero
       :src="!!work.detail.img ? work.detail.img[0].src : ''"
       :alt="!!work.detail.img ? work.detail.img[0].alt : ''"
+      :width="1200"
+      :height="1200"
       :title="work.title"
-      type="blurry"
+      type="dark"
     />
     <div class="l-content">
       <div class="l-content__section">

@@ -14,6 +14,10 @@ import VIconQiita from '../../components/VIcons/qiita.vue';
   }
 })
 export default class Top extends Vue {
+  get hero(): {} {
+    return about.hero;
+  }
+
   get description(): string {
     return about.description;
   }

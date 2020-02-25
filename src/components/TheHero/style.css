@@ -60,10 +60,6 @@
   object-position: top center;
   right: 0;
   left: 0;
-
-  &--blurry {
-    filter: blur(3px);
-  }
 }
 
 .overlay {
