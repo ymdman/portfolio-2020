@@ -1,4 +1,4 @@
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Prop, Watch, Vue } from 'vue-property-decorator';
 
 @Component
 export default class VLazyLoadImg extends Vue {
@@ -17,8 +17,16 @@ export default class VLazyLoadImg extends Vue {
   @Prop({ type: Number })
   height!: number;
 
-  mounted(): void {
+  @Watch('src')
+  updateSrc(): void {
     if (!this.isLoadingSupported) {
+      this.observe();
+    }
+  }
+
+  mounted(): void {
+    const isSrc = !!this.src;
+    if (!this.isLoadingSupported && isSrc) {
       this.observe();
     }
   }

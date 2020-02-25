@@ -2,9 +2,9 @@
   <img
     :src="isLoadingSupported && src"
     :alt="alt"
-    :width="width"
-    :height="height"
-    loading="lazy"
+    :width="isLoadingSupported && width"
+    :height="isLoadingSupported && height"
+    :loading="isLoadingSupported && 'lazy'"
     class="image"
   />
 </template>
