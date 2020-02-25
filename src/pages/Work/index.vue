@@ -28,8 +28,10 @@
               <dd class="work__summary-text">{{ work.detail.name }}</dd>
               <dt class="work__summary-title">担当</dt>
               <dd class="work__summary-text">{{ work.charge }}</dd>
-              <dt class="work__summary-title">期間</dt>
-              <dd class="work__summary-text">{{ work.experience }}</dd>
+              <template v-if="!!work.experience">
+                <dt class="work__summary-title">期間</dt>
+                <dd class="work__summary-text">{{ work.experience }}</dd>
+              </template>
               <dt class="work__summary-title">その他</dt>
               <dd class="work__summary-text">{{ work.other }}</dd>
             </dl>
