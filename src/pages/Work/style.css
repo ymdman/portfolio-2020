@@ -19,21 +19,21 @@
 
 .image-list {
   margin-top: 30px;
-}
 
-.image-item {
-  margin-right: auto;
-  margin-left: auto;
+  &__item {
+    margin-right: auto;
+    margin-left: auto;
 
-  & + & {
-    margin-top: 60px;
-  }
+    & + & {
+      margin-top: 60px;
+    }
 
-  &--large {
-    max-width: 850px;
-  }
+    &--large {
+      max-width: 850px;
+    }
 
-  &--small {
-    max-width: 320px;
+    &--small {
+      max-width: 320px;
+    }
   }
 }

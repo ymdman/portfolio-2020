@@ -41,7 +41,7 @@
           <ul v-if="!!work.detail.img" class="image-list">
             <li
               v-if="!!work.detail.img[0]"
-              class="image-item image-item--large"
+              class="image-list__item image-list__item--large"
             >
               <v-lazy-load-img
                 :src="work.detail.img[0].src"
@@ -52,7 +52,7 @@
             </li>
             <li
               v-if="!!work.detail.img[1]"
-              class="image-item image-item--small"
+              class="image-list__item image-list__item--small"
             >
               <v-lazy-load-img
                 :src="work.detail.img[1].src"
