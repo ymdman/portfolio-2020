@@ -1,89 +1,83 @@
 .works {
-  &__description {
-    margin-top: 30px;
-  }
+}
 
-  &__summary-title {
-    font-weight: bold;
-  }
+.overall-description {
+}
 
-  &__summary-text + &__summary-title {
-    margin-top: 15px;
-  }
+.detail-description {
+  margin-top: 30px;
+}
 
-  &__project {
-    margin-top: 30px;
-  }
+.project {
+  margin-top: 30px;
+}
 
-  &__project-list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: -20px;
-    margin-left: -2%;
-  }
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -20px;
+  margin-left: -2%;
+}
 
-  &__project-item {
-    flex-basis: calc(33.3% - 2%);
-    margin-top: 20px;
-    margin-left: 2%;
-  }
+.item {
+  flex-basis: calc(33.3% - 2%);
+  margin-top: 20px;
+  margin-left: 2%;
+}
 
-  &__project-anchor {
-    color: var(--fc-primary);
-    text-decoration: none;
-  }
+.anchor {
+  color: var(--color-font-primary);
+  text-decoration: none;
+}
 
-  &__project-detail {
-    cursor: pointer;
-  }
+.figure {
+  cursor: pointer;
+}
 
-  &__project-thumbnail {
-    overflow: hidden;
-    border: solid 1px var(--bdc-tertiary);
-  }
+.thumbnail {
+  overflow: hidden;
+  border: solid 1px var(--color-borer-tertiary);
+}
 
-  &__project-image {
-    transition: transform 400ms;
-  }
+.image {
+  transition: transform 400ms;
+}
 
-  &__project-no-image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #3d3d3d;
-    color: #fff;
-    transition: transform 400ms;
+.no-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3d3d3d;
+  color: #fff;
+  transition: transform 400ms;
 
-    &::before {
-      content: "";
-      display: block;
-      padding-top: 75%;
-    }
-  }
-
-  &__project-caption {
-    font-family: "Yanone Kaffeesatz", sans-serif;
-    margin-top: 3px;
-  }
-
-  &__project-detail:hover &__project-thumbnail {
-    border-color: var(--color-theme);
-  }
-
-  &__project-detail:hover &__project-image,
-  &__project-detail:hover &__project-no-image {
-    transform: scale(1.05);
-  }
-
-  &__project-detail:hover &__project-caption {
-    color: var(--color-theme);
+  &::before {
+    content: "";
+    display: block;
+    padding-top: 75%;
   }
 }
 
+.caption {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  margin-top: 3px;
+}
+
+.detail:hover .thumbnail {
+  border-color: var(--color-theme);
+}
+
+.detail:hover .image,
+.detail:hover .no-image {
+  transform: scale(1.05);
+}
+
+.detail:hover .caption {
+  color: var(--color-theme);
+}
+
 @media (--mq-mobile) {
-  .works {
-    &__project-item {
-      flex-basis: calc(50% - 2%);
-    }
+  .item {
+    flex-basis: calc(50% - 2%);
   }
 }

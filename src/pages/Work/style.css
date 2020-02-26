@@ -1,43 +1,39 @@
 .work {
-  &__summary-list {
-    margin-top: 30px;
+}
+
+.description {
+}
+
+.summary-list {
+  margin-top: 30px;
+}
+
+.anchor {
+  margin-top: 30px;
+  display: inline-block;
+
+  &:hover {
+    opacity: 0.6;
   }
+}
 
-  &__summary-title {
-    font-weight: bold;
-  }
+.image-list {
+  margin-top: 30px;
+}
 
-  &__summary-text + &__summary-title {
-    margin-top: 15px;
-  }
+.image-item {
+  margin-right: auto;
+  margin-left: auto;
 
-  &__button-anchor {
-    margin-top: 30px;
-    display: inline-block;
-
-    &:hover {
-      opacity: 0.6;
-    }
-  }
-
-  &__images {
+  & + & {
     margin-top: 60px;
   }
 
-  &__image-item {
-    margin-right: auto;
-    margin-left: auto;
+  &--large {
+    max-width: 850px;
+  }
 
-    & + & {
-      margin-top: 60px;
-    }
-
-    &--large {
-      max-width: 850px;
-    }
-
-    &--small {
-      max-width: 320px;
-    }
+  &--small {
+    max-width: 320px;
   }
 }

@@ -1,52 +1,49 @@
 <template>
-  <div class="l-content">
-    <div class="l-content__section">
-      <h1 class="c-title c-title--level-1">Works</h1>
-      <div class="l-content__body">
-        <p>{{ description }}</p>
+  <div class="works">
+    <div class="l-content">
+      <div class="l-content__section">
+        <h1 class="c-title c-title--level-1">Works</h1>
+        <div class="l-content__body">
+          <p class="overall-description">{{ description }}</p>
+        </div>
       </div>
-    </div>
-    <section
-      v-for="item in list"
-      :key="item.key"
-      class="l-content__section l-content__section--lined"
-    >
-      <h2 class="c-title c-title--level-2">{{ item.companyName }}</h2>
-      <div class="l-content__body">
-        <div class="works">
-          <dl class="works__summary-list">
-            <dt class="works__summary-title">職種</dt>
-            <dd class="works__summary-text">{{ item.job }}</dd>
-            <dt class="works__summary-title">雇用形態</dt>
-            <dd class="works__summary-text">{{ item.status }}</dd>
-            <dt class="works__summary-title">期間</dt>
-            <dd class="works__summary-text">{{ item.period }}</dd>
+      <section
+        v-for="item in list"
+        :key="item.key"
+        class="l-content__section l-content__section--lined"
+      >
+        <h2 class="c-title c-title--level-2">{{ item.companyName }}</h2>
+        <div class="l-content__body">
+          <dl class="c-dfn-list">
+            <dt class="c-dfn-list__term">職種</dt>
+            <dd class="c-dfn-list__desc">{{ item.job }}</dd>
+            <dt class="c-dfn-list__term">雇用形態</dt>
+            <dd class="c-dfn-list__desc">{{ item.status }}</dd>
+            <dt class="c-dfn-list__term">期間</dt>
+            <dd class="c-dfn-list__desc">{{ item.period }}</dd>
           </dl>
-          <p class="works__description">{{ item.description }}</p>
-          <div class="works__project">
-            <ul class="works__project-list">
+          <p class="detail-description">{{ item.description }}</p>
+          <div class="project">
+            <ul class="list">
               <li
                 v-for="project in item.projects"
                 :key="project.key"
-                class="works__project-item"
+                class="item"
               >
-                <router-link
-                  :to="`/works/${project.key}`"
-                  class="works__project-anchor"
-                >
-                  <figure class="works__project-detail">
-                    <div class="works__project-thumbnail">
+                <router-link :to="`/works/${project.key}`" class="anchor">
+                  <figure class="figure">
+                    <div class="thumbnail">
                       <v-lazy-load-img
                         v-if="!!project.image"
                         :src="project.image.src"
                         :alt="project.image.alt"
                         :width="600"
                         :height="400"
-                        class="works__project-image"
+                        class="image"
                       />
-                      <div v-else class="works__project-no-image">No Image</div>
+                      <div v-else class="no-image">No Image</div>
                     </div>
-                    <figcaption class="works__project-caption">
+                    <figcaption class="caption">
                       {{ project.siteName }}
                     </figcaption>
                   </figure>
@@ -55,8 +52,8 @@
             </ul>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </div>
 </template>
 

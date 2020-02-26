@@ -9,7 +9,7 @@ import store from '../index';
 
 interface Detail {
   title: string;
-  description: string;
+  type: string;
   detail: {
     name: string;
     img?: [
@@ -22,10 +22,10 @@ interface Detail {
         alt: string;
       }
     ];
+    charge: string;
+    experience: string;
+    other: string;
   };
-  charge: string;
-  experience: string;
-  other: string;
 }
 
 @Module({
@@ -37,13 +37,13 @@ interface Detail {
 class Work extends VuexModule {
   _detail: Detail = {
     title: '',
-    description: '',
+    type: '',
     detail: {
-      name: ''
-    },
-    charge: '',
-    experience: '',
-    other: ''
+      name: '',
+      charge: '',
+      experience: '',
+      other: ''
+    }
   };
 
   get detail(): Detail {
@@ -66,13 +66,13 @@ class Work extends VuexModule {
   clearData(): void {
     const detail: Detail = {
       title: '',
-      description: '',
+      type: '',
       detail: {
-        name: ''
-      },
-      charge: '',
-      experience: '',
-      other: ''
+        name: '',
+        charge: '',
+        experience: '',
+        other: ''
+      }
     };
     this.updateDetail(detail);
   }
