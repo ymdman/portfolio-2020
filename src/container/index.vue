@@ -1,12 +1,10 @@
 <template>
   <div class="container">
-    <div class="body">
-      <the-header />
-      <main :class="{ main: !isTopPage && !isWorkPage }">
-        <router-view />
-      </main>
-      <the-footer />
-    </div>
+    <the-header />
+    <main :class="{ main: !isTopPage && !isWorkPage }">
+      <router-view />
+    </main>
+    <the-footer />
     <the-menu />
   </div>
 </template>

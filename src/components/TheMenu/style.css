@@ -81,6 +81,7 @@
   background-color: #000;
   position: fixed;
   top: 0;
+  left: 0;
   opacity: 0.6;
 
   &-enter-active,
