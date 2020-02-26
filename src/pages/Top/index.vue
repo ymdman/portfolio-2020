@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="top">
     <the-hero
       :src="hero.src"
       :alt="hero.alt"
@@ -13,17 +13,17 @@
         <h2 class="c-title c-title--level-1">About</h2>
         <div class="l-content__body">
           <!-- eslint-disable vue/no-v-html -->
-          <p v-html="description" />
+          <p class="description" v-html="description" />
         </div>
       </section>
       <section class="l-content__section">
         <h3 class="c-title c-title--level-2">Point</h3>
         <div class="l-content__body">
-          <div class="point">
-            <ul class="point__list">
-              <li v-for="item in pointList" :key="item">{{ item }}</li>
-            </ul>
-          </div>
+          <ul class="point-list">
+            <li v-for="item in pointList" :key="item" class="point-list__item">
+              {{ item }}
+            </li>
+          </ul>
         </div>
       </section>
       <section class="l-content__section l-content__section--lined">

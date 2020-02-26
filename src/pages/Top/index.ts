@@ -1,5 +1,5 @@
 import { Component, Vue } from 'vue-property-decorator';
-import about from '../../store/modules/about';
+import top from '../../store/modules/top';
 import TheHero from '../../components/TheHero/index.vue';
 import VLazyLoadImg from '../../components/VLazyLoadImg/index.vue';
 import VIconGitHub from '../../components/VIcons/github.vue';
@@ -15,22 +15,22 @@ import VIconQiita from '../../components/VIcons/qiita.vue';
 })
 export default class Top extends Vue {
   get hero(): {} {
-    return about.hero;
+    return top.hero;
   }
 
   get description(): string {
-    return about.description;
+    return top.description;
   }
 
   get pointList(): string[] {
-    return about.pointList;
+    return top.pointList;
   }
 
   get profile(): {} {
-    return about.profile;
+    return top.profile;
   }
 
   created(): void {
-    about.fetchData();
+    top.fetchData();
   }
 }

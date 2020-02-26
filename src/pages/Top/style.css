@@ -1,8 +1,15 @@
-.point {
-  &__list {
-    list-style: disc;
-    padding-left: 20px;
-    line-height: var(--lh-large);
+.top {
+}
+
+.description {
+}
+
+.point-list {
+  list-style: disc;
+  padding-left: 20px;
+  line-height: var(--lh-large);
+
+  &__item {
   }
 }
 
