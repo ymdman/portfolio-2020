@@ -37,8 +37,8 @@
     margin-top: 10px;
     margin-left: 10px;
   }
+}
 
-  &__description {
-    margin-top: 20px;
-  }
+.tool-description {
+  margin-top: 20px;
 }

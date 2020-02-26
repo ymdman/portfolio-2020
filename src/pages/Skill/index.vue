@@ -40,7 +40,7 @@
               <V-tag :label="item" />
             </li>
           </ul>
-          <p class="tool-list__description">{{ tool.description }}</p>
+          <p class="tool-description">{{ tool.description }}</p>
         </div>
       </section>
     </div>
