@@ -1,54 +1,49 @@
 <template>
-  <div class="l-content">
-    <section class="l-content__section">
-      <h1 class="c-title c-title--level-1">Skill</h1>
-      <div class="l-content__body">
-        <p>{{ description }}</p>
-      </div>
-    </section>
-    <section class="l-content__section">
-      <h2 class="c-title c-title--level-2">Programming + Library</h2>
-      <div class="l-content__body">
-        <div class="programming">
-          <ul class="programming__type-list">
+  <div class="skill">
+    <div class="l-content">
+      <section class="l-content__section">
+        <h1 class="c-title c-title--level-1">Skill</h1>
+        <div class="l-content__body">
+          <p class="description">{{ description }}</p>
+        </div>
+      </section>
+      <section class="l-content__section">
+        <h2 class="c-title c-title--level-2">Programming + Library</h2>
+        <div class="l-content__body">
+          <ul class="graph-list">
             <li
               v-for="item in programming.typeList"
               :key="item.key"
-              class="programming__type-item"
+              class="graph-list__item"
             >
-              <p>{{ item.language }}</p>
-              <v-bar-graph
-                :glow-width="item.score"
-                class="programming__bar-graph"
-              />
+              <p class="graph-list__title">{{ item.language }}</p>
+              <v-bar-graph :glow-width="item.score" class="graph-list__graph" />
             </li>
           </ul>
-          <dl class="programming__detail-list">
+          <dl class="detail-list c-dfn-list">
             <template v-for="item in programming.detailList">
-              <dt :key="item.title" class="programming__detail-title">
+              <dt :key="item.title" class="c-dfn-list__term">
                 {{ item.title }}
               </dt>
-              <dd :key="item.text" class="programming__detail-text">
+              <dd :key="item.text" class="c-dfn-list__desc">
                 {{ item.text }}
               </dd>
             </template>
           </dl>
         </div>
-      </div>
-    </section>
-    <section class="l-content__section">
-      <h2 class="c-title c-title--level-2">Tool</h2>
-      <div class="l-content__body">
-        <div class="tool">
-          <ul class="tool__list">
-            <li v-for="item in tool.list" :key="item" class="tool__item">
+      </section>
+      <section class="l-content__section">
+        <h2 class="c-title c-title--level-2">Tool</h2>
+        <div class="l-content__body">
+          <ul class="tool-list">
+            <li v-for="item in tool.list" :key="item" class="tool-list__item">
               <V-tag :label="item" />
             </li>
           </ul>
-          <p class="tool__text">{{ tool.description }}</p>
+          <p class="tool-list__description">{{ tool.description }}</p>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </div>
 </template>
 

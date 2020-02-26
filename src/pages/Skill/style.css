@@ -1,44 +1,36 @@
-.programming {
-  &__type-list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: -20px;
-    margin-left: -20px;
-  }
+.skill {
+}
 
-  &__type-item {
+.description {
+}
+
+.graph-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -20px;
+  margin-left: -20px;
+
+  &__item {
     width: calc(50% - 20px);
     margin-top: 20px;
     margin-left: 20px;
   }
 
-  &__bar-graph {
+  &__title {
+  }
+
+  &__graph {
     margin-top: 5px;
-  }
-
-  &__detail-list {
-    margin-top: 30px;
-  }
-
-  &__detail-title {
-    font-size: var(--fs-medium);
-    font-weight: bold;
-  }
-
-  &__detail-text {
-    margin-top: 3px;
-  }
-
-  &__detail-text + &__detail-title {
-    margin-top: 20px;
   }
 }
 
-.tool {
-  &__list {
-    margin-top: -10px;
-    margin-left: -10px;
-  }
+.detail-list {
+  margin-top: 30px;
+}
+
+.tool-list {
+  margin-top: -10px;
+  margin-left: -10px;
 
   &__item {
     display: inline-block;
@@ -46,7 +38,7 @@
     margin-left: 10px;
   }
 
-  &__text {
+  &__description {
     margin-top: 20px;
   }
 }
