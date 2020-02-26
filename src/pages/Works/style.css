@@ -63,16 +63,16 @@
   margin-top: 3px;
 }
 
-.detail:hover .thumbnail {
+.figure:hover .thumbnail {
   border-color: var(--color-theme);
 }
 
-.detail:hover .image,
-.detail:hover .no-image {
+.figure:hover .image,
+.figure:hover .no-image {
   transform: scale(1.05);
 }
 
-.detail:hover .caption {
+.figure:hover .caption {
   color: var(--color-theme);
 }
 
