@@ -32,6 +32,13 @@
   cursor: pointer;
 }
 
+@media (--mq-tablet) {
+  .header {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+}
+
 @media (--mq-mobile) {
   .header {
     padding-right: 20px;
