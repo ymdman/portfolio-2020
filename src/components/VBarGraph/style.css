@@ -1,7 +1,7 @@
 .bar-graph {
   width: 100%;
   height: 15px;
-  background-color: var(--bdc-quaternary);
+  background-color: var(--color-bg-primary);
   position: relative;
 }
 

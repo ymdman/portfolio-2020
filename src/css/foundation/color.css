@@ -1,15 +1,16 @@
 :root {
-  /* color */
+  /* theme color */
   --color-theme: #f1b021;
 
   /* font color */
-  --fc-primary: #3d3d3d;
-  --fc-secondary: #666;
-  --fc-tertiary: #666;
+  --color-font-primary: #3d3d3d;
+  --color-font-secondary: #666;
+
+  /* background color */
+  --color-bg-primary: #f1f1f1;
 
   /* border color */
-  --bdc-primary: #3d3d3d;
-  --bdc-secondary: #666;
-  --bdc-tertiary: #ccc;
-  --bdc-quaternary: #f1f1f1;
+  --color-border-primary: #3d3d3d;
+  --color-border-secondary: #666;
+  --color-borer-tertiary: #ccc;
 }
