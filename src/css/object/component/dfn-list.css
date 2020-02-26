@@ -1,0 +1,9 @@
+.c-dfn-list {
+  &__term {
+    font-weight: bold;
+  }
+
+  &__desc + &__term {
+    margin-top: 15px;
+  }
+}
