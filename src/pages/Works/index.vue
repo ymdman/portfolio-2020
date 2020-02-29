@@ -4,7 +4,7 @@
       <div class="l-content__section">
         <h1 class="c-title c-title--level-1">Works</h1>
         <div class="l-content__body">
-          <p class="overall-description">{{ description }}</p>
+          <p class="description">{{ description }}</p>
         </div>
       </div>
       <section
@@ -22,28 +22,33 @@
             <dt class="c-dfn-list__term">期間</dt>
             <dd class="c-dfn-list__desc">{{ item.period }}</dd>
           </dl>
-          <p class="detail-description">{{ item.description }}</p>
+          <p class="summary">{{ item.summary }}</p>
           <div class="project">
-            <ul class="list">
+            <ul class="project__list">
               <li
                 v-for="project in item.projects"
                 :key="project.key"
-                class="item"
+                class="project__item"
               >
-                <router-link :to="`/works/${project.key}`" class="anchor">
-                  <figure class="figure">
-                    <div class="thumbnail">
-                      <v-lazy-load-img
-                        v-if="!!project.image"
-                        :src="project.image.src"
-                        :alt="project.image.alt"
-                        :width="600"
-                        :height="400"
-                        class="image"
-                      />
-                      <div v-else class="no-image">No Image</div>
+                <router-link
+                  :to="`/works/${project.key}`"
+                  class="project__anchor"
+                >
+                  <figure class="project__figure">
+                    <div class="project__thumbnail">
+                      <div class="project__thumbnail-inner">
+                        <v-lazy-load-img
+                          v-if="!!project.image"
+                          :src="project.image.src"
+                          :alt="project.image.alt"
+                          :width="600"
+                          :height="400"
+                          class="project__image"
+                        />
+                        <div v-else class="project__no-image">No Image</div>
+                      </div>
                     </div>
-                    <figcaption class="caption">
+                    <figcaption class="project__caption">
                       {{ project.siteName }}
                     </figcaption>
                   </figure>
