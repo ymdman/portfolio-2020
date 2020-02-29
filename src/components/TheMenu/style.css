@@ -100,6 +100,12 @@
   }
 }
 
+@media (--mq-tablet) {
+  .icon-x {
+    right: 5%;
+  }
+}
+
 @media (--mq-mobile) {
   .icon-x {
     right: 20px;
