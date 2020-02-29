@@ -61,7 +61,7 @@
                   </a>
                 </li>
               </ul>
-              <p class="profile__description">{{ profile.description }}</p>
+              <p class="profile__summary">{{ profile.summary }}</p>
             </div>
           </div>
         </div>

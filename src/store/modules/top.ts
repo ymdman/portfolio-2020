@@ -21,7 +21,7 @@ interface Profile {
   };
   name: string;
   job: string;
-  description: string;
+  summary: string;
 }
 
 @Module({
@@ -45,7 +45,7 @@ class About extends VuexModule {
     },
     name: '',
     job: '',
-    description: ''
+    summary: ''
   };
   _description = '';
 
@@ -67,7 +67,7 @@ class About extends VuexModule {
 
   @Action
   fetchData(): void {
-    fetch('/api/about.json')
+    fetch('/api/top.json')
       .then(res => res.json())
       .then(res => {
         this.updateHero(res.hero);
