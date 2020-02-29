@@ -15,7 +15,7 @@ type Position = {
 };
 
 const router = new VueRouter({
-  // mode: 'history',
+  mode: 'history',
   routes: [
     {
       path: '/skill',
