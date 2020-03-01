@@ -36,21 +36,6 @@
   &__thumbnail {
     overflow: hidden;
     border: solid 1px var(--color-borer-tertiary);
-    position: relative;
-
-    &::before {
-      content: "";
-      display: block;
-      padding-top: 75%;
-    }
-  }
-
-  &__thumbnail-inner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
   }
 
   &__image {
