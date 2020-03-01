@@ -11,7 +11,7 @@ import TheMenu from '../components/TheMenu/index.vue';
   components: {
     TheFooter,
     TheHeader,
-    TheMenu,
+    TheMenu
   }
 })
 export default class Container extends Vue {
