@@ -30,7 +30,7 @@
         <h3 class="c-title c-title--level-2">Profile</h3>
         <div class="l-content__body">
           <div class="profile">
-            <div class="profile__image">
+            <div class="profile__avatar">
               <v-lazy-load-img
                 :src="profile.image.src"
                 :alt="profile.image.alt"
