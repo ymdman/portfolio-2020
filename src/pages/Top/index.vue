@@ -48,7 +48,7 @@
                     target="_blank"
                     class="profile__anchor"
                   >
-                    <VIconGitHub class="profile__github" />
+                    <v-icon-gitHub class="profile__github" />
                   </a>
                 </li>
                 <li class="profile__sns-item">
@@ -57,7 +57,7 @@
                     target="_blank"
                     class="profile__anchor"
                   >
-                    <VIconQiita class="profile__qiita" />
+                    <v-icon-qiita class="profile__qiita" />
                   </a>
                 </li>
               </ul>
