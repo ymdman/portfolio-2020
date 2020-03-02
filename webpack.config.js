@@ -1,7 +1,7 @@
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const TerserJSPlugin = require('terser-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 const isDevelopment = process.env.NODE_ENV === 'development';
 
@@ -58,7 +58,7 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.vue', '.js', '.json'],
     alias: {
-      vue: 'vue/dist/vue.js'
+      vue: 'vue/dist/vue.esm.js'
     }
   },
 
@@ -70,7 +70,12 @@ module.exports = {
   ],
 
   optimization: {
-    minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})]
+    minimizer: [
+      new TerserPlugin({
+        extractComments: false
+      }),
+      new OptimizeCSSAssetsPlugin()
+    ]
   },
 
   devServer: {
