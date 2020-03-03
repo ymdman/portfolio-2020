@@ -2,8 +2,8 @@ import { Component, Vue } from 'vue-property-decorator';
 import top from '../../store/modules/top';
 import TheHero from '../../components/TheHero/index.vue';
 import VLazyLoadImg from '../../components/VLazyLoadImg/index.vue';
-import VIconGitHub from '../../components/VIcons/github.vue';
-import VIconQiita from '../../components/VIcons/qiita.vue';
+import VIconGitHub from '../../components/VIcons/VIconGitHub/index.vue';
+import VIconQiita from '../../components/VIcons/VIconQiita/index.vue';
 
 @Component({
   components: {

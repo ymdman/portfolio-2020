@@ -49,10 +49,10 @@
   import { Component, Vue } from 'vue-property-decorator';
 
   @Component
-  export default class Qiita extends Vue {}
+  export default class VIconQiita extends Vue {}
 </script>
 
 <!-- prettier-ignore -->
 <style scoped>
-  @import './style';
+  @import '../style';
 </style>

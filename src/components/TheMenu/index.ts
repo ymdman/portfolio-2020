@@ -1,6 +1,6 @@
 import { Component, Vue } from 'vue-property-decorator';
 import menu from '../../store/modules/menu';
-import VIconX from '../VIcons/x.vue';
+import VIconX from '../VIcons/VIconX/index.vue';
 
 @Component({
   components: {

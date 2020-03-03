@@ -25,10 +25,10 @@
   import { Component, Vue } from 'vue-property-decorator';
 
   @Component
-  export default class X extends Vue {}
+  export default class VIconX extends Vue {}
 </script>
 
 <!-- prettier-ignore -->
 <style scoped>
-  @import './style';
+  @import '../style';
 </style>

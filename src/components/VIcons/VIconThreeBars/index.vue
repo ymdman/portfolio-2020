@@ -11,10 +11,10 @@
   import { Component, Vue } from 'vue-property-decorator';
 
   @Component
-  export default class ThreeBars extends Vue {}
+  export default class VIconThreeBars extends Vue {}
 </script>
 
 <!-- prettier-ignore -->
 <style scoped>
-  @import './style';
+  @import '../style';
 </style>

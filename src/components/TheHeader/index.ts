@@ -1,7 +1,7 @@
 import { Component, Vue } from 'vue-property-decorator';
 import menu from '../../store/modules/menu';
 import hero from '../../store/modules/hero';
-import VIconThreeBars from '../../components/VIcons/threeBars.vue';
+import VIconThreeBars from '../../components/VIcons/VIconThreeBars/index.vue';
 
 @Component({
   components: {

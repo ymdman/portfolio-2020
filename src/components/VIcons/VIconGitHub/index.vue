@@ -30,10 +30,10 @@
   import { Component, Vue } from 'vue-property-decorator';
 
   @Component
-  export default class GitHub extends Vue {}
+  export default class VIconGitHub extends Vue {}
 </script>
 
 <!-- prettier-ignore -->
 <style scoped>
-  @import './style';
+  @import '../style';
 </style>
