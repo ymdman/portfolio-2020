@@ -3,4 +3,5 @@ dist/app.js
 dist/app.css
 dist/images/
 dist/api/
+src/images/
 .DS_Store
