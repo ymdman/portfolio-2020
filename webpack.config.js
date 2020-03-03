@@ -2,6 +2,9 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const imageminMozjpeg = require('imagemin-mozjpeg');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const isDevelopment = process.env.NODE_ENV === 'development';
 
@@ -66,6 +69,20 @@ module.exports = {
     new VueLoaderPlugin(),
     new MiniCssExtractPlugin({
       filename: 'app.css'
+    }),
+    new CopyWebpackPlugin([
+      {
+        from: `${__dirname}/src/images`,
+        to: `${__dirname}/dist/images`
+      }
+    ]),
+    new ImageminPlugin({
+      plugins: [
+        imageminMozjpeg({
+          quality: 65,
+          progressive: true
+        })
+      ]
     })
   ],
 
