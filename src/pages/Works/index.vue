@@ -36,15 +36,17 @@
                 >
                   <figure class="project__figure">
                     <div class="project__thumbnail">
-                      <v-lazy-load-img
-                        v-if="!!project.image"
-                        :src="project.image.src"
-                        :alt="project.image.alt"
-                        :width="600"
-                        :height="400"
-                        class="project__image"
-                      />
-                      <div v-else class="project__no-image">No Image</div>
+                      <div class="project__thumbnail-inner">
+                        <v-lazy-load-img
+                          v-if="!!project.image"
+                          :src="project.image.src"
+                          :alt="project.image.alt"
+                          :width="600"
+                          :height="400"
+                          class="project__image"
+                        />
+                        <div v-else class="project__no-image">No Image</div>
+                      </div>
                     </div>
                     <figcaption class="project__caption">
                       {{ project.siteName }}
