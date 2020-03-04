@@ -54,6 +54,10 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.(woff|woff2)$/,
+        loader: 'file-loader?name=./fonts/[name].[ext]'
       }
     ]
   },

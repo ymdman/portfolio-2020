@@ -2,9 +2,9 @@
 
 /* Foundation */
 @import "modern-css-reset";
-@import "./foundation/color.css";
-@import "./foundation/font.css";
+@import "./foundation/fonts.css";
 @import "./foundation/font-size.css";
+@import "./foundation/color.css";
 @import "./foundation/line-height.css";
 @import "./foundation/layout.css";
 @import "./foundation/z-index.css";
