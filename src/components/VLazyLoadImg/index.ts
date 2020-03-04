@@ -38,14 +38,17 @@ export default class VLazyLoadImg extends Vue {
   }
 
   observe(): void {
-    this.io = new IntersectionObserver(entries => {
-      const entry = entries[0];
-      if (!entry.isIntersecting) {
-        return;
-      }
-      this.unobserve();
-      this.$el.setAttribute('src', this.src);
-    });
+    this.io = new IntersectionObserver(
+      entries => {
+        const entry = entries[0];
+        if (!entry.isIntersecting) {
+          return;
+        }
+        this.unobserve();
+        this.$el.setAttribute('src', this.src);
+      },
+      { rootMargin: '300px 0px' }
+    );
     this.io.observe(this.$el);
   }
 
