@@ -47,7 +47,7 @@ export default class VLazyLoadImg extends Vue {
         this.unobserve();
         this.$el.setAttribute('src', this.src);
       },
-      { rootMargin: '300px 0px' }
+      { rootMargin: '350px 0px' }
     );
     this.io.observe(this.$el);
   }
