@@ -39,8 +39,8 @@
               />
             </div>
             <div class="profile__body">
-              <h3 class="profile__name">{{ profile.name }}</h3>
-              <h4 class="profile__job">{{ profile.job }}</h4>
+              <h4 class="profile__name">{{ profile.name }}</h4>
+              <p class="profile__job">{{ profile.job }}</p>
               <ul class="profile__sns-list">
                 <li class="profile__sns-item">
                   <a
