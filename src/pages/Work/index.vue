@@ -9,7 +9,7 @@
       type="dark"
       class="hero l-content__section"
     />
-    <div class="l-content__section">
+    <section class="l-content__section">
       <h2 class="c-title c-title--level-2">{{ work.title }}</h2>
       <div class="l-content__body">
         <p class="description">{{ work.description }}</p>
@@ -63,7 +63,7 @@
           </li>
         </ul>
       </div>
-    </div>
+    </section>
   </div>
 </template>
 

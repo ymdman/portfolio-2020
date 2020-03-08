@@ -1,11 +1,11 @@
 <template>
   <div class="l-content">
-    <div class="l-content__section">
+    <section class="l-content__section">
       <h1 class="c-title c-title--level-1">Works</h1>
       <div class="l-content__body">
         <p class="description">{{ description }}</p>
       </div>
-    </div>
+    </section>
     <section
       v-for="item in list"
       :key="item.key"
