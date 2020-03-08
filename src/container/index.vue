@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <the-header />
-    <main :class="{ main: !isTopPage && !isWorkPage }">
+    <main class="main" :class="{ 'main--spacing': !isTopPage && !isWorkPage }">
       <router-view />
     </main>
     <the-footer />

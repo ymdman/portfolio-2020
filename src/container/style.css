@@ -4,7 +4,9 @@
 }
 
 .main {
-  padding-top: var(--layout-header-height);
+  &--spacing {
+    padding-top: var(--layout-header-height);
+  }
 }
 
 @media (--mq-tablet) {
