@@ -67,8 +67,6 @@
       </div>
     </section>
   </div>
-  </section>
-  </div>
 </template>
 
 <!-- prettier-ignore -->
