@@ -11,7 +11,7 @@
       :height="height"
       class="image"
     />
-    <div :class="{ overlay: type === 'dark' }" />
+    <div v-if="!!type" :class="{ overlay: type === 'dark' }" />
   </div>
 </template>
 
