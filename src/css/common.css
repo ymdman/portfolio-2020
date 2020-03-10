@@ -15,10 +15,10 @@
 @import "./layout/content.css";
 
 /* Object/Component */
-@import "./object/component/title.css";
+@import "./object/component/anchor.css";
 @import "./object/component/dfn-list.css";
+@import "./object/component/title.css";
 
 /* Object/Project */
 
 /* Object/Utility */
-@import "object/utility/anchor.css";
