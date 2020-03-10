@@ -11,7 +11,7 @@ interface Hero {
   src: string;
   alt: string;
   title: string;
-  read: string;
+  subTitle: string;
 }
 
 interface Profile {
@@ -35,7 +35,7 @@ class About extends VuexModule {
     src: '',
     alt: '',
     title: '',
-    read: ''
+    subTitle: ''
   };
   _pointList = [];
   _profile: Profile = {

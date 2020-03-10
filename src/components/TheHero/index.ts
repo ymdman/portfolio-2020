@@ -26,7 +26,7 @@ export default class TheHero extends Vue {
   title!: string;
 
   @Prop({ type: String })
-  read!: string;
+  subTitle!: string;
 
   @Prop({ type: String })
   type!: string;

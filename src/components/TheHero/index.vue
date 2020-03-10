@@ -2,7 +2,7 @@
   <div class="hero">
     <div class="content">
       <h1 class="title">{{ title }}</h1>
-      <p v-if="!!read" class="read">{{ read }}</p>
+      <p v-if="!!subTitle" class="sub-title">{{ subTitle }}</p>
     </div>
     <v-lazy-load-img
       :src="src"

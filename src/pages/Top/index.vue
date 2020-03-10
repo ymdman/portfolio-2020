@@ -6,7 +6,7 @@
       :width="1200"
       :height="1200"
       :title="hero.title"
-      :read="hero.read"
+      :sub-title="hero.subTitle"
       class="hero l-content__section"
     />
     <section class="l-content__section">
