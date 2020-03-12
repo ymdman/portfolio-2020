@@ -3,8 +3,8 @@
     <the-hero
       :src="hero.src"
       :alt="hero.alt"
-      :width="1200"
-      :height="1200"
+      :width="2500"
+      :height="1250"
       :title="hero.title"
       :sub-title="hero.subTitle"
       class="hero l-content__section"
@@ -34,8 +34,8 @@
             <v-lazy-load-img
               :src="profile.image.src"
               :alt="profile.image.alt"
-              :width="396"
-              :height="396"
+              :width="180"
+              :height="180"
             />
           </div>
           <div class="profile__body">

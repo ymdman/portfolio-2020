@@ -4,7 +4,7 @@
       :src="!!work.detail.img ? work.detail.img[0].src : ''"
       :alt="!!work.detail.img ? work.detail.img[0].alt : ''"
       :width="1200"
-      :height="1200"
+      :height="2400"
       :title="work.title"
       type="dark"
       class="hero l-content__section"
@@ -46,8 +46,8 @@
             <v-lazy-load-img
               :src="work.detail.img[0].src"
               :alt="work.detail.img[0].alt"
-              :width="1000"
-              :height="1000"
+              :width="850"
+              :height="1700"
             />
           </li>
           <li
@@ -58,7 +58,7 @@
               :src="work.detail.img[1].src"
               :alt="work.detail.img[1].alt"
               :width="320"
-              :height="320"
+              :height="640"
             />
           </li>
         </ul>

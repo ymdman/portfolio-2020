@@ -40,8 +40,8 @@
                         v-if="!!project.image"
                         :src="project.image.src"
                         :alt="project.image.alt"
-                        :width="600"
-                        :height="400"
+                        :width="400"
+                        :height="300"
                         class="project__image"
                       />
                       <div v-else class="project__no-image">No Image</div>
