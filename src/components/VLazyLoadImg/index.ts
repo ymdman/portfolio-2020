@@ -25,14 +25,13 @@ export default class VLazyLoadImg extends Vue {
   }
 
   mounted(): void {
-    const isSrc = !!this.src;
-    if (!this.isLoadingSupported && isSrc) {
+    if (!this.isLoadingSupported && !!this.src) {
       this.observe();
     }
   }
 
   destroyed(): void {
-    if (!this.isLoadingSupported) {
+    if (!this.isLoadingSupported && !!this.src) {
       this.unobserve();
     }
   }
