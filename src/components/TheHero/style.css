@@ -2,19 +2,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
   margin-right: calc(((100vw - 100%) / 2) * -1);
   margin-left: calc(((100vw - 100%) / 2) * -1);
   padding-right: calc((100vw - 100%) / 2);
   padding-left: calc((100vw - 100%) / 2);
   height: 100vh;
+  overflow: hidden;
 }
 
 .content {
   color: #fff;
-  text-align: center;
   font-family: "Yanone Kaffeesatz", sans-serif;
-  animation-name: fade-in;
+  text-align: center;
+  animation-name: move;
   animation-duration: 1000ms;
 }
 
@@ -26,10 +26,10 @@
 
 .sub-title {
   display: flex;
-  align-items: center;
   justify-content: center;
-  font-weight: bold;
+  align-items: center;
   font-size: var(--fs-xxxx-large);
+  font-weight: bold;
 
   &::before,
   &::after {
@@ -52,14 +52,14 @@
 .image {
   position: absolute;
   top: 0;
-  right: 0;
   bottom: 0;
-  left: 0;
   z-index: var(--z-index-hero);
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: top center;
+  right: 0;
+  left: 0;
 }
 
 .overlay {
@@ -83,7 +83,7 @@
   }
 }
 
-@keyframes fade-in {
+@keyframes move {
   from {
     opacity: 0;
     transform: translateY(50px);

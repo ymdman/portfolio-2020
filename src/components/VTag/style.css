@@ -1,7 +1,7 @@
 .tag {
-  padding: 5px 15px;
-  border-radius: 15px;
   background-color: var(--color-theme);
   color: #fff;
   text-align: center;
+  border-radius: 15px;
+  padding: 5px 15px;
 }
