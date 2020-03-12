@@ -31,9 +31,9 @@
   }
 
   &__thumbnail {
+    position: relative;
     overflow: hidden;
     border: solid 1px var(--color-borer-tertiary);
-    position: relative;
 
     &::before {
       content: "";
@@ -45,9 +45,9 @@
   &__thumbnail-inner {
     position: absolute;
     top: 0;
-    left: 0;
-    bottom: 0;
     right: 0;
+    bottom: 0;
+    left: 0;
   }
 
   &__image {
@@ -70,8 +70,8 @@
   }
 
   &__caption {
-    font-family: "Yanone Kaffeesatz", sans-serif;
     margin-top: 3px;
+    font-family: "Yanone Kaffeesatz", sans-serif;
   }
 
   &__figure:hover &__thumbnail {

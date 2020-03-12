@@ -1,15 +1,15 @@
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  height: var(--layout-header-height);
-  padding-right: 15%;
-  padding-left: 15%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: var(--z-index-header);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 15%;
+  padding-left: 15%;
+  width: 100%;
+  height: var(--layout-header-height);
 
   &--white {
     color: #fff;
@@ -17,9 +17,9 @@
 }
 
 .logo {
-  font-family: "Yanone Kaffeesatz", sans-serif;
-  font-size: var(--fs-xxx-large);
   font-weight: bold;
+  font-size: var(--fs-xxx-large);
+  font-family: "Yanone Kaffeesatz", sans-serif;
 }
 
 .anchor {

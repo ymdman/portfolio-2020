@@ -6,8 +6,8 @@
 }
 
 .point-list {
-  list-style: disc;
   padding-left: 20px;
+  list-style: disc;
   line-height: var(--lh-large);
 
   &__item {
@@ -19,10 +19,10 @@
 
   &__avatar {
     flex: none;
-    border-radius: 50%;
+    overflow: hidden;
     width: 180px;
     height: 180px;
-    overflow: hidden;
+    border-radius: 50%;
   }
 
   &__body {
@@ -54,9 +54,9 @@
 
   &__github {
     display: block;
-    color: #000;
     width: 30px;
     height: 30px;
+    color: #000;
   }
 
   &__qiita {
