@@ -1,14 +1,16 @@
 <template>
   <div class="l-content">
-    <the-hero
-      :src="hero.src"
-      :alt="hero.alt"
-      :width="2500"
-      :height="1250"
-      :title="hero.title"
-      :sub-title="hero.subTitle"
-      class="hero l-content__section"
-    />
+    <section class="l-content__section">
+      <the-hero
+        :src="hero.src"
+        :alt="hero.alt"
+        :width="2500"
+        :height="1250"
+        :title="hero.title"
+        :sub-title="hero.subTitle"
+        class="hero"
+      />
+    </section>
     <section class="l-content__section">
       <h2 class="c-title c-title--level-1">About</h2>
       <div class="l-content__body">

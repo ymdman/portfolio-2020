@@ -1,14 +1,16 @@
 <template>
   <div class="l-content">
-    <the-hero
-      :src="!!work.detail.img ? work.detail.img[0].src : ''"
-      :alt="!!work.detail.img ? work.detail.img[0].alt : ''"
-      :width="1200"
-      :height="2400"
-      :title="work.title"
-      type="dark"
-      class="hero l-content__section"
-    />
+    <section class="l-content__section">
+      <the-hero
+        :src="!!work.detail.img ? work.detail.img[0].src : ''"
+        :alt="!!work.detail.img ? work.detail.img[0].alt : ''"
+        :width="1200"
+        :height="2400"
+        :title="work.title"
+        type="dark"
+        class="hero"
+      />
+    </section>
     <section class="l-content__section">
       <h2 class="c-title c-title--level-2">{{ work.title }}</h2>
       <div class="l-content__body">
