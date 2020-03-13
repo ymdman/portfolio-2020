@@ -30,5 +30,5 @@
 
 <!-- prettier-ignore -->
 <style scoped>
-  @import '../style';
+  @import '../index';
 </style>
